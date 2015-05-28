@@ -2,7 +2,8 @@
 
 var appDependencies = [
   'ng',
-  'ui.router'
+  'ui.router',
+  'ngSanitize'
 ];
 
 angular
@@ -11,14 +12,15 @@ angular
 
 require('./app.controller');
 require('./about.controller');
+require('./directives');
 
 appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
 function appConfig ($stateProvider, $urlRouterProvider, $locationProvider) {
   var routes = [
     {
-      name: 'main',
-      path: ''
+      name: 'resume',
+      path: 'resume'
     },
     {
       name: 'about',

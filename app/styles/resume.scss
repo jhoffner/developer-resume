@@ -1,0 +1,160 @@
+$section-label-width: 150px;
+
+.resume {
+  h1, h2 {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: $tiny-spacing;
+  }
+
+  h2 {
+    margin-top: $tiny-spacing;
+    margin-bottom: $mega-spacing;
+    font-size: 26px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 20px;
+    text-align: right;
+    margin-right: $big-spacing;
+    letter-spacing: 0.7px;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: lighten($text-color, 10%);
+    margin-left: $big-spacing;
+    letter-spacing: 0.5px;
+
+    &.header {
+      background-color: darken(white, 5%);
+      padding: 5px;
+      margin-bottom: -$small-spacing;
+    }
+  }
+
+  .notice {
+    color: lighten($text-color, 50%);
+  }
+
+  .clear-filters {
+    font-size: 13px;
+    margin-left: $tiny-spacing;
+    float: right;
+    @include clearfix;
+  }
+
+  article {
+  }
+
+  section {
+    clear: both;
+    margin-bottom: $huge-spacing;
+
+    .label {
+      float: left;
+      width: $section-label-width;
+      color: $text-color;
+    }
+
+    .content {
+      border-left: 2px solid darken(white, 10%);
+      margin-left: $section-label-width;
+
+      ul {
+        list-style-type: circle;
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  section:after {
+    clear: both;
+  }
+
+  .team {
+    margin-left: $big-spacing;
+    margin-bottom: $mega-spacing;
+
+    h5 {
+      background-color: $gray;
+      color: white;
+      padding: $tiny-spacing;
+
+      span {
+        float: right;
+      }
+    }
+
+    h4 {
+      margin-left: 0;
+    }
+
+    h6 {
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: $default-spacing;
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      padding-left: $big-spacing;
+
+      li {
+        font-size: 14px !important;
+      }
+    }
+
+    .project {
+      border-left: $tiny-spacing solid darken(white, 5%);
+      padding-left: $default-spacing;
+      margin-bottom: $huge-spacing;
+      > h4 {
+//        margin-left: $big-spacing;
+        margin-top: $big-spacing;
+        span {
+          display: block;
+          font-size: 1.1rem;
+        }
+      }
+
+      .role {
+        > h4 {
+          margin-top: $big-spacing;
+        }
+
+        &:first-of-type {
+          > h4 {
+            margin-top: 0;
+          }
+        }
+      }
+
+
+      span.tag, span.trail-tag{
+        padding: 1px 2px;
+        background-color: darken(white, 12%);
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      span.trail-tag {
+        margin: 0 3px;
+      }
+
+      .role-details {
+        margin-left: $small-spacing;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,39 @@
+.team
+  h5
+    | {{team.name}}, {{team.title}}
+    span {{team.date}}
+  div(ng-if='shouldShowTeam()')
+    p {{team.summary}}
+
+    tags-used(label='Roles', items='team.roles', type='role')
+
+    .project(ng-repeat='project in team.projects')
+      h4
+        a(href="{{project.url}}") {{project.name}}
+        span {{project.type}}
+      .project-details
+        div(ng-if='shouldShowProject(project)')
+          p {{project.summary}}
+          .role(ng-repeat='role in project.roles', ng-if='shouldShowRole(role)')
+            h4 {{roleName(role)}}
+            .role-details
+              tags-used(label='Skills Used', items='role.skills', type='skill')
+              div(ng-if='role.highlights')
+                h6 Highlights:
+                ul(ng-if='shouldShowHighlights(role)')
+                  highlight(ng-repeat='item in role.highlights', item='item')
+                .notice(ng-if='!shouldShowHighlights(role)')
+                  | There are no items to show based off of the filters selected
+                  clear-filters
+
+              .samples(ng-if='role.samples')
+                h6 Code Samples:
+                ul.inline-items
+                  li(ng-repeat='sample in role.samples')
+                    a {{sample.name}}
+        .notice(ng-if='!shouldShowProject(project)')
+          | This project is not relevant to the filters selected.
+          clear-filters
+  .notice(ng-if='!shouldShowTeam()')
+    | This item is not relevant to the filters selected.
+    clear-filters

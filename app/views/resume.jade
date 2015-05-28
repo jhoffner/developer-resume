@@ -1,0 +1,88 @@
+.resume
+  h1 {{name}}
+  h2 {{careerTitle}}
+
+  article
+    resume-section(label='Summary')
+      ul
+        li 15 Years of professional software development experience (35 years old)
+        li Self-taught at the age of 19
+        li First professional job was at the age of 20
+        li Started as a designer & front-end developer
+        li Has worked on Federal, State, Military, B2B and Consumer applications
+        li Co-founded a VC funded startup in 2012
+        li 2x Startup Weekend Winner
+
+    resume-section(label='Roles')
+      .area
+        .two-columns
+          h4 Primary
+          ul
+            li: filter-tag(key='frontend', years='15', type='role')
+            li: filter-tag(key='backend', years='13', type='role')
+            li: filter-tag(key='web-architecture', years='7', type='role')
+            li: filter-tag(key='tech-leadership', years='7', type='role')
+        .two-columns
+          h4 Secondary
+          ul
+            li: filter-tag(key='agile-pm', years='6', type='role')
+            li: filter-tag(key='product-management', years='3', type='role')
+            li: filter-tag(key='devops', years='0', type='role')
+
+
+    resume-section(label='Skills')
+      .area
+        h4 Primary
+        ul.two-columns
+          li: filter-tag(key='ror', years='4', type='skill')
+          li: filter-tag(key='ruby', years='4', type='skill')
+          li: filter-tag(key='js', years='15', type='skill')
+          li: filter-tag(key='angularjs', years='0', type='skill')
+          li: filter-tag(key='html', years='15', type='skill')
+          li: filter-tag(key='nodejs', years='3', type='skill')
+        ul.two-columns
+          li: filter-tag(key='aws', years='0', type='skill')
+          li: filter-tag(key='docker', years='1', type='skill')
+          li: filter-tag(key='mongodb', years='4', type='skill')
+          li: filter-tag(key='sqlserver', years='10', type='skill')
+          li: filter-tag(key='c#', years='9', type='skill')
+          li: filter-tag(key='aspnetmvc', years='3', type='skill')
+
+      .area
+        h4 Secondary
+        ul.inline-items
+          li: filter-tag(key='redis', type='skill')
+          li: filter-tag(key='memcached', type='skill')
+          li: filter-tag(key='coffee', type='skill')
+          li: filter-tag(key='sass', type='skill')
+          li: filter-tag(key='less', type='skill')
+          li: filter-tag(key='Sketch', type='skill')
+          li: filter-tag(key='git', type='skill')
+          li: filter-tag(key='gulp', type='skill')
+          li: filter-tag(key='digital-ocean', type='skill')
+          li: filter-tag(key='heroku', type='skill')
+          li: filter-tag(key='elastic-search', type='skill')
+          li: filter-tag(key='jquery', type='skill')
+          li: filter-tag(key='nginx', type='skill')
+          li: filter-tag(key='web-sockets', type='skill')
+
+      .area
+        h4 Throwback
+        ul.inline-items
+          li: filter-tag(key='xml', disabled='true')
+          li: filter-tag(key='xslt', disabled='true')
+          li: filter-tag(key='svn', disabled='true')
+          li: filter-tag(key='flash', disabled='true')
+          li: filter-tag(key='asp-net', disabled='true')
+          li: filter-tag(key='asp', disabled='true')
+
+
+    resume-section(label='Projects')
+      h4.header On Work Time
+      team(ng-repeat='team in teams', team='team')
+
+      h4.header On Personal Time
+
+
+
+

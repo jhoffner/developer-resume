@@ -1,14 +1,14 @@
 html(ng-app='app', ng-controller='AppController')
   head
     meta(charset='utf-8')
-    title frontendboilerplate
+    title Resume Demo
     meta(name='description', content='')
     meta(property='og:description', content='')
 
     meta(name='apple-mobile-web-app-capable', content='yes')
-    meta(name='apple-mobile-web-app-title', content='frontendboilerplate')
+    meta(name='apple-mobile-web-app-title', content='Resume Demo')
     meta(name='mobile-web-app-capable', content='yes')
-    meta(name='mobile-web-app-title', content='frontendboilerplate')
+    meta(name='mobile-web-app-title', content='Resume Demo')
 
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
@@ -17,6 +17,8 @@ html(ng-app='app', ng-controller='AppController')
     link(rel='stylesheet', href='../../bower_components/bootstrap/dist/css/bootstrap.css')
     <!-- endbower -->
     <!-- endbuild -->
+
+    link(href='http://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700,300|Montserrat' rel='stylesheet' type='text/css')
 
     <!-- build:css(build/dev) /styles/app.css -->
     <!-- inject:css -->
@@ -30,25 +32,23 @@ html(ng-app='app', ng-controller='AppController')
 
     base(href='/')
   body
-    header
-
-    .container
+    main.container(ui-sref="resume")
       .page-header
-        h1 Frontend Boilerplate
         .menu
-          a(ui-sref="main") Home
+          a(ui-sref="resume") Resume
           a(ui-sref="about") About
 
       div(ui-view="guest")
 
-    footer
-      .container
-        p.text-muted Made with love.
+    //footer
+    //  .container
+    //    p.text-muted Made with love.
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     script(src='../../bower_components/jquery/dist/jquery.js')
     script(src='../../bower_components/angular/angular.js')
+    script(src='../../bower_components/angular-sanitize/angular-sanitize.js')
     script(src='../../bower_components/angular-ui-router/release/angular-ui-router.js')
     script(src='../../bower_components/bootstrap/dist/js/bootstrap.js')
     <!-- endbower -->

@@ -1,0 +1,21 @@
+h4.project
+  a(href="{{project.url}}") {{project.name}}
+  span {{project.type}}
+.project
+  p {{project.summary}}
+
+  div(ng-repeat='role in project.roles')
+    h4 {{roleName(role)}}
+    .role
+      tags-used(label='Skills Used', items='role.skills')
+
+      div(ng-if='role.highlights')
+        h6 Highlights:
+        ul
+          highlight(ng-repeat='item in role.highlights', item='item')
+
+      div(ng-if='role.samples')
+        h6 Code Samples:
+        ul.inline-items
+          li(ng-repeat='sample in role.samples')
+            a {{sample.name}}

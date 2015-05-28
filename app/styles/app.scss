@@ -1,29 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
 html {
   position: relative;
   min-height: 100%;
 }
 body {
   margin-bottom: 60px;
+  font-family: 'Lato', sans-sarif;
 }
 
-h1 {
-  margin-top: 100px;
-  color: #fff;
-  font-size: 40px;
-}
-
-header {
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-
-  background: url("/images/image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-filter: brightness(40%);
-  filter: brightness(40%);
+a {
+  cursor: pointer;
+  &.active {
+    font-weight: bold;
+  }
 }
 
 footer {
@@ -31,20 +22,54 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: $bg-color;
 }
 
-.container {
+.page-header {
+  margin-top: $big-spacing;
+  margin-bottom: 0;
+}
+
+main {
   width: auto;
-  max-width: 680px;
+  min-width: $page-width;
+  max-width: 60%;
   padding: 0 15px;
 }
 .container .text-muted {
-  margin: 20px 0;
+  margin: $default-spacing 0;
 }
 .menu {
-  margin-top: 80px;
   a {
-    margin: 0 10px 0 0;
+    margin: 0 $small-spacing 0 0;
   }
 }
+
+.area {
+  @include clearfix;
+}
+
+.two-columns {
+  float: left;
+  width: 50%;
+}
+
+ul.two-columns, .area.two-columns ul {
+  li {
+    margin-right: 30px;
+    line-height: 24px;
+  }
+}
+
+ul.inline-items {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: auto;
+    margin-right: $huge-spacing;
+  }
+}
+
+
+
+@import 'resume';
