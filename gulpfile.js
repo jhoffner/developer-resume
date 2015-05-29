@@ -217,3 +217,9 @@ gulp.task('deps', ['html:dist'], function () {
 gulp.task('dist', ['wiredep', 'dev', 'images', 'htaccess', 'views:dist'], function () {
   gulp.start('deps');
 });
+
+gulp.task('serveprod', function() {
+  return gulp.src('build/dev/views/index.html')
+    .pipe(gulp.dest('build/dev'))
+    .pipe($.browserSync.reload({stream:false}));
+});

@@ -11,12 +11,15 @@
     "type": "git",
     "url": "git://github.com/vhpoet/frontend-boilerplate.git"
   },
+  "scripts": {
+    "start": "bower i ; gulp",
+    "postinstall": "bower i ; gulp dev"
+  },
   "readmeFilename": "README",
   "devDependencies": {
     "browser-sync": "^1.8.3",
     "connect-modrewrite": "^0.7.9",
     "del": "^1.1.1",
-    "gulp": "~3.8.10",
     "gulp-bower": "0.0.7",
     "gulp-csso": "^0.2.9",
     "gulp-if": "^1.2.5",
@@ -43,6 +46,8 @@
     "gulp-yaml": "~0.2.4"
   },
   "dependencies": {
-    "js-yaml": "~3.3.1"
+    "gulp": "~3.8.10",
+    "js-yaml": "~3.3.1",
+    "bower": "~1.4.1"
   }
 }
