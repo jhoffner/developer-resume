@@ -11,14 +11,16 @@ $section-label-width: 150px;
     h3 {
       text-align: left;
     }
-    span {
-      margin-left: 3px;
-      margin-right: $small-spacing;
-    }
+    div > {
+      span {
+        margin-left: 3px;
+        margin-right: $small-spacing;
+      }
 
-    a {
-      float: right;
-      @include clearfix;
+      a {
+        float: right;
+        @include clearfix;
+      }
     }
   }
   h1, h2 {
@@ -143,6 +145,10 @@ $section-label-width: 150px;
           display: block;
           font-size: 1.1rem;
         }
+
+      }
+      h4 + p {
+        margin-left: $small-spacing;
       }
 
       .role {

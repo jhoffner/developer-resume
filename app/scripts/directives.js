@@ -92,6 +92,10 @@ function team () {
 
         return true;
       }
+
+      scope.filterName = function() {
+        return $scope.$root.role || $scope.$root.skill;
+      }
     }
   };
 }
@@ -100,8 +104,19 @@ function highlight () {
   return {
     restrict: 'E',
     scope: { keys: '@', item: '=' },
-    template: '<li ng-if="shouldShow()" ng-bind-html="item.text"></li>',
+    template: '<li ng-if="shouldShow()" ng-bind-html="html()"></li>',
     link: function(scope) {
+      scope.html = function() {
+        let text = scope.item.text;
+        (scope.item.skills || []).forEach(function(skill) {
+          text = text.replace(new RegExp(skill, "g"), "<span class='tag'>" + skill + "</span>");
+        });
+
+
+        // also allow [[token]] values to be
+        text = text.replace(/`(.*)`/g, '<span class="tag">$1</span>')
+        return text;
+      }
       scope.shouldShow = function() {
         let skillKey = scope.$root.skill;
         if (skillKey) {
@@ -116,7 +131,7 @@ function highlight () {
 function clearFilters () {
   return {
     restrict: 'E',
-    template: '<a class="clear-filters" ng-click="clear()">Clear All Filters</a>',
+    template: '<a class="clear-filters" ng-click="clear()">Remove Filter</a>',
     link: function(scope) {
       scope.clear = function() {
         scope.$root.skill = null;
@@ -146,7 +161,7 @@ function tagsList () {
         scope.collection = scope.$root.resume[scope.type + 's'];
       }
       scope.items = scope.collection.filter(function(skill) {
-        return skill.category == scope.category;
+        return !scope.category || skill.category == scope.category;
       });
     }
   };
@@ -179,11 +194,10 @@ function filterTag ($document) {
 
       // after a user clicks on a filter we don't want the page to jump
       el.on('click', function(ev) {
-        console.log(ev);
         setTimeout(function() {
           // clientY helps restore the offset, -10 helps fix a jitter issue
-          $document.scrollToElement(el, ev.clientY - 10);
-        }, 100);
+          $document.scrollToElement(el, ev.clientY - 10, 0);
+        }, 0);
       });
     }
   };

@@ -190,13 +190,13 @@ teams:
                 - "Web Sockets"
               highlights:
                 -
-                  text: "Extended <span class='tag'>Rails</span> to handle the concept known as PJAX on a more integrated and deeper level"
+                  text: "Extended `Rails` to handle the concept known as PJAX on a more integrated and deeper level"
                   skills:
                     - "Ruby on Rails"
                     - "Ruby"
                     - "JavaScript"
                 -
-                  text: "Implemented a concept dubbed DJAX (Deferred AJAX) to allow <span class='tag'>Rails</span> to handle slow-client requests by leveraging <span class='tag'>Web Sockets</span> and <span class='tag'>Redis</span>."
+                  text: "Implemented a concept dubbed DJAX (Deferred AJAX) to allow `Rails` to handle slow-client requests by leveraging Web Sockets and Redis."
                   skills:
                     - "Ruby on Rails"
                     - "Ruby"
@@ -213,12 +213,12 @@ teams:
                 -
                   text: "Wrote all of the front-end codebase myself."
                 -
-                  text: "Built a custom client-side templating engine complete with limited two-way bindings utilizing <span class='tag'>jQuery</span> as the core framework"
+                  text: "Built a custom client-side templating engine complete with limited two-way bindings utilizing jQuery as the core framework"
                   skills:
                     - "CoffeeScript"
                     - "jQuery"
                 -
-                  text: "Built a custom client-side application framework built on top of <span class='tag'>jQuery</span> that uses a hybrid design leveraging PJAX."
+                  text: "Built a custom client-side application framework built on top of jQuery that uses a hybrid design leveraging PJAX."
                   skills:
                     - "CoffeeScript"
                     - "jQuery"
@@ -232,12 +232,12 @@ teams:
                 - "Redis"
               highlights:
                 -
-                  text: "Architected the entire <span class='tag'>Rails</span> API and <span class='tag'>MongoDB</span> data model for the site."
+                  text: "Architected the entire `Rails` API and MongoDB data model for the site."
                   skills:
                     - "Ruby on Rails"
                     - "MongoDB"
                 -
-                  text: "Utilized advanced caching techniques by leveraging <span class=\"tag\">Redis</span> and <span class=\"tag\">Memcached</span> services together"
+                  text: "Utilized advanced caching techniques by leveraging Redis and Memcached services together"
                   skills:
                     - "Redis"
                     - "Memcached"
@@ -252,7 +252,7 @@ teams:
               skills:
                 - "Ruby on Rails"
                 - "Ruby"
-                - "nodejs"
+                - "Node.js"
                 - "JavaScript"
                 - "Docker"
                 - "Git"
@@ -273,20 +273,20 @@ teams:
 
               highlights:
                 -
-                  text: "Improved jbuilder performance by bypassing the need to use the <span class='tag'>Rails</span> templating system."
+                  text: "Improved jbuilder performance by bypassing the need to use the `Rails` templating system."
                   skills:
                     - "Ruby on Rails"
                 -
-                  text: "Built a sophisticated and flexible <span class='tag'>Rails</span> API scheme that allowed for multiple front-end clients to interface with it."
+                  text: "Built a sophisticated and flexible `Rails` API scheme that allowed for multiple front-end clients to interface with it."
                   skills:
                     - "Ruby on Rails"
                 -
-                  text: "Implemented a micro-service oriented architecture leveraging <span class='tag'>Docker</span> and <span class='tag'>Nginx</span> to link <span class='tag'>Node.js</span> and <span class='tag'>Rails</span> services together."
+                  text: "Implemented a micro-service oriented architecture leveraging Docker and Nginx to link Node.js and `Rails` services together."
                   skills:
                     - "Ruby on Rails"
                     - "Docker"
                     - "Nginx"
-                    - "nodejs"
+                    - "Node.js"
             -
               name: "Frontend Web Development"
               skills:
@@ -296,7 +296,7 @@ teams:
                 - "Gulp"
               highlights:
                 -
-                  text: "Quickly learned <span class=\"tag\">Angular.JS</span> so that I could contribute to the codebase along with the rest of the front-end team."
+                  text: "Quickly learned AngularJS so that I could contribute to the codebase along with the rest of the front-end team."
                   skills:
                     - "AngularJS"
                     - "JavaScript"
@@ -310,15 +310,28 @@ teams:
                 - "Redis"
               highlights:
                 -
-                  text: "Architected the entire <span class='tag'>Rails</span> API and <span class='tag'>MongoDB</span> data model for the site."
+                  text: "Architected the entire Rails API and MongoDB data model for the site."
                   skills:
                     - "Ruby on Rails"
                     - "MongoDB"
                 -
-                  text: "Utilized advanced caching techniques by leveraging <span class=\"tag\">Redis</span> and <span class=\"tag\">Memcached</span> services together"
+                  text: "Utilized advanced caching techniques by leveraging Redis and Memcached services together"
                   skills:
                     - "Redis"
                     - "Memcached"
+
+            - name: "Devops"
+              skills:
+                - Docker
+                - AWS
+                - Bash
+                - Linux
+              highlights:
+                - text: "Wrote Bash scripts to deploy Docker based architecture to AWS"
+                  skills:
+                    - Bash
+                    - MongoDB
+                    - AWS
 
         - name: 'Stateful'
           type: 'Ruby Gem'
@@ -376,7 +389,7 @@ teams:
 
               highlights:
                 -
-                  text: "Rebuilt the legacy codebase to use a more modern framework approach while still leveraging the underlying <span class='tag'>Prototype.JS</span> library."
+                  text: "Rebuilt the legacy codebase to use a more modern framework approach while still leveraging the underlying Prototype.JS library."
                   skills:
                     - "JavaScript"
                     - "Prototype.JS"
@@ -413,7 +426,7 @@ teams:
                 - "jQuery"
               highlights:
                 -
-                  text: "Built a custom client-side framework on top of <span class='tag'>jQuery</span> to ease and DRY up development efforts. This framework was part of a similar design that I had been evolving over the passed 3 years."
+                  text: "Built a custom client-side framework on top of jQuery to ease and DRY up development efforts. This framework was part of a similar design that I had been evolving over the passed 3 years."
                   skills:
                     - "JavaScript"
                     - "jQuery"
@@ -421,13 +434,13 @@ teams:
               name: "Backend Web Development"
               skills:
                 - "C#"
-                - "aspnetmvc"
+                - "ASP.NET MVC"
                 - "Lucene"
                 - "MS SQL Server"
                 - "MongoDB"
               highlights:
                 -
-                  text: "Utilizing a non-standard open source ORM, I created a repository based data model that leveraged both <span class='tag'>SQL Server</span> and <span class='tag'>MongoDB</span> with a CQRS influenced architectual pattern."
+                  text: "Utilizing a non-standard open source ORM, I created a repository based data model that leveraged both SQL Server and MongoDB with a CQRS influenced architectual pattern."
                   skills:
                     - "C#"
                     - "MongoDB"

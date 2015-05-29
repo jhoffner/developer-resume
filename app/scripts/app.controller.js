@@ -21,6 +21,10 @@ function AppController($scope, $http){
 
   $scope.filter = function filter(type, name) {
     $scope[type] = $scope[type] == name ? null : name;
+    // TODO: convert to a single filter property
+    // we now only allow one filter at a time, so null the other one
+    $scope[type == 'role' ? 'skill' : 'role'] = null;
+
     return $scope;
   }
 }
