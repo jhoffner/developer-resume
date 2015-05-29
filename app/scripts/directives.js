@@ -19,7 +19,7 @@ function resumeSection () {
   };
 }
 
-function team () {
+function team ($http) {
   function projectHasSkill(project, skill) {
     return project.roles.some(function(role) {
       return role.skills.indexOf(skill) > -1;
@@ -88,6 +88,25 @@ function team () {
 
       scope.filterName = function() {
         return scope.$root.role || scope.$root.skill;
+      }
+
+      scope.setSample = function(sample) {
+        if (scope.activeSample == sample) {
+          scope.activeSample = null;
+        }
+        else {
+          if (sample.file && !sample.code) {
+            $http.get('samples/' + sample.file)
+              .success(function(data) {
+                sample.code = data;
+                scope.setSample(sample);
+              });
+          }
+          else {
+            scope.activeSample = sample.code ? sample : null;
+          }
+        }
+
       }
     }
   };
@@ -187,10 +206,8 @@ function filterTag ($document) {
 
       // after a user clicks on a filter we don't want the page to jump
       el.on('click', function(ev) {
-        setTimeout(function() {
-          // clientY helps restore the offset, -10 helps fix a jitter issue
-          $document.scrollToElement(el, ev.clientY - 10, 0);
-        }, 0);
+        // clientY helps restore the offset, -10 helps fix a jitter issue
+        $document.scrollToElement(el, ev.clientY - 10, 0);
       });
     }
   };

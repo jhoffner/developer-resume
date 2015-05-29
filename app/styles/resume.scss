@@ -56,8 +56,9 @@ $section-label-width: 150px;
 
     &.header {
       background-color: darken(white, 5%);
-      padding: 5px;
-      margin-bottom: -$small-spacing;
+      padding: $default-spacing;
+      margin-left: 0;
+      padding-left: $huge-spacing;
     }
   }
 
@@ -92,7 +93,7 @@ $section-label-width: 150px;
       ul {
         list-style-type: circle;
         li {
-          font-size: 15px;
+          font-size: 14.5px;
         }
       }
     }
@@ -106,7 +107,8 @@ $section-label-width: 150px;
     margin-bottom: $mega-spacing;
 
     h5 {
-      background-color: darken(white, 15%);
+      font-size: 18px;
+      font-weight: bold;
       color: black;
       padding: $tiny-spacing;
 
@@ -135,7 +137,8 @@ $section-label-width: 150px;
     }
 
     .project {
-      border-left: $tiny-spacing solid darken(white, 5%);
+      border-left: $big-spacing solid darken(white, 5%);
+      margin-left: -$big-spacing;
       padding-left: $default-spacing;
       margin-bottom: $huge-spacing;
       > h4 {
@@ -151,18 +154,6 @@ $section-label-width: 150px;
         margin-left: $small-spacing;
       }
 
-      .role {
-        > h4 {
-          margin-top: $big-spacing;
-        }
-
-        &:first-of-type {
-          > h4 {
-            margin-top: 0;
-          }
-        }
-      }
-
 
       span.tag, span.trail-tag{
         padding: 1px 2px;
@@ -174,10 +165,6 @@ $section-label-width: 150px;
 
       span.trail-tag {
         margin: 0 3px;
-      }
-
-      .role-details {
-        margin-left: $small-spacing;
       }
     }
 

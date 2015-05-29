@@ -42,77 +42,27 @@
       h4.header @Work
       team(ng-repeat='team in resume.teams | filter:{personal: false}', team='team')
 
-      h4.header @Home
+      h4.header @Play
       team(ng-repeat='team in resume.teams | filter:{personal: true}', team='team')
 
-    resume-section(label='Interests')
-      .area
-        h4 My Favorite Roles & Technologies
+    resume-section(label='Interests', ng-if='resume.interests')
+      .area(ng-repeat='area in resume.interests')
+        h4 {{area.category}}
         ul.inline-items
-          li Fullstack Web Development
-          li Ruby
-          li Ruby on Rails
-          li Node.js
-          li Docker
-          li CoffeeScript
-          li UX
+          li(ng-repeat='item in area.items') {{item}}
 
-      .area
-        h4 Roles & Technologies I like to avoid
-        ul.inline-items
-          li Devops
-          li PHP
-          li Java
-
-      .area
-        h4 Roles & Technologies I want to learn or improve at
-        ul.inline-items
-          li Growth Hacking
-          li Product Management
-          li UX Design
-          li Mobile Development
-          li Flux/React
-          li Xamarin based iOS Apps
-          li Go
-          li Elixir
-
-      .area
-        h4 Challenges that interest me the most
-        ul.inline-items
-          li Framework & Library Development
-          li Recommendation/Matching Systems
-          li Communication/Messaging Systems
-          li Social Design
-          li Micro-service Oriented Architecture
-
-      .area
-        h4 My Personal Interests & Hobbies
-        ul.inline-items
-          li Food
-          li Health
-          li Music
-          li Bass Guitar
-          li Video Games
-          li Programming
-          li Drones
-
-    resume-section(label='Goals')
-      .area
-        h4 Career
+    resume-section(label='Goals', ng-if='resume.goals')
+      .area(ng-repeat='area in resume.goals')
+        h4 {{area.category}}
         ul
-          li Stay up-to-date with latest tech
-          li Work on something that I would personally use
-          li Build something that is innovative
-          li Early Retirement
+          li(ng-repeat='item in area.items') {{item}}
 
-      .area
-        h4 Work Environment
+    resume-section(label='Articles', ng-if='resume.articles')
+      .area(ng-repeat='area in resume.articles')
+        h4(ng-if="area.category") {{area.category}}
         ul
-          li Non-corporate vibe
-          li Passionate team
-          li Modern equipment
-          li Access to good food
-          li Freedom to explore innovative solutions
+          li(ng-repeat='item in area.items')
+            a(href="{{item.href}}") {{item.name}}
 
     //resume-section(label='Critique')
     //  .area

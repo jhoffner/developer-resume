@@ -4,7 +4,8 @@ var appDependencies = [
   'ng',
   'ui.router',
   'ngSanitize',
-  'duScroll'
+  'duScroll',
+  'hljs'
 ];
 
 angular

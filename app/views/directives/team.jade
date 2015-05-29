@@ -30,7 +30,9 @@
             h6 Code Samples
             ul.inline-items(ng-if="shouldShowGroup(project, 'samples')")
               li(ng-repeat='sample in project.samples')
-                a {{sample.name}}
+                a(ng-click='setSample(sample)', ng-class="{active: sample === activeSample}") {{sample.name}}
+            .code-sample(ng-if="activeSample")
+              div(hljs, class="language-{{activeSample.language}}", language="{{activeSample.language}}" source="activeSample.code")
             .notice(ng-if='!shouldShowGroup(project, "samples")')
               | There are no {{filterName()}} related samples to show.
               clear-filters
