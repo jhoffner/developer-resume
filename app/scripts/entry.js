@@ -3,7 +3,8 @@
 var appDependencies = [
   'ng',
   'ui.router',
-  'ngSanitize'
+  'ngSanitize',
+  'duScroll'
 ];
 
 angular

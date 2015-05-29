@@ -1,87 +1,143 @@
 .resume
-  h1 {{name}}
-  h2 {{careerTitle}}
+  .active-filters(ng-if='skill || role')
+    h3 Active Filters
+    div(ng-if='role')
+      b Role:
+      span {{tagLabel(role)}}
+      a(ng-click='filter("role", role)') Remove
+    div(ng-if='skill')
+      b Skill:
+      span {{tagLabel(skill)}}
+      a(ng-click='filter("skill", skill)') Remove
+
+  h1 {{resume.name}}
+  h2(ng-if='resume.careerTitle') {{resume.careerTitle}}
 
   article
     resume-section(label='Summary')
       ul
-        li 15 Years of professional software development experience (35 years old)
-        li Self-taught at the age of 19
-        li First professional job was at the age of 20
-        li Started as a designer & front-end developer
-        li Has worked on Federal, State, Military, B2B and Consumer applications
-        li Co-founded a VC funded startup in 2012
-        li 2x Startup Weekend Winner
+        li(ng-repeat='item in resume.summary') {{item}}
 
     resume-section(label='Roles')
       .area
         .two-columns
-          h4 Primary
-          ul
-            li: filter-tag(key='frontend', years='15', type='role')
-            li: filter-tag(key='backend', years='13', type='role')
-            li: filter-tag(key='web-architecture', years='7', type='role')
-            li: filter-tag(key='tech-leadership', years='7', type='role')
+          tags-list(category='primary', label='Primary', type='role')
+
         .two-columns
-          h4 Secondary
-          ul
-            li: filter-tag(key='agile-pm', years='6', type='role')
-            li: filter-tag(key='product-management', years='3', type='role')
-            li: filter-tag(key='devops', years='0', type='role')
+          tags-list(category='secondary', label='Secondary', type='role')
 
 
     resume-section(label='Skills')
       .area
-        h4 Primary
-        ul.two-columns
-          li: filter-tag(key='ror', years='4', type='skill')
-          li: filter-tag(key='ruby', years='4', type='skill')
-          li: filter-tag(key='js', years='15', type='skill')
-          li: filter-tag(key='angularjs', years='0', type='skill')
-          li: filter-tag(key='html', years='15', type='skill')
-          li: filter-tag(key='nodejs', years='3', type='skill')
-        ul.two-columns
-          li: filter-tag(key='aws', years='0', type='skill')
-          li: filter-tag(key='docker', years='1', type='skill')
-          li: filter-tag(key='mongodb', years='4', type='skill')
-          li: filter-tag(key='sqlserver', years='10', type='skill')
-          li: filter-tag(key='c#', years='9', type='skill')
-          li: filter-tag(key='aspnetmvc', years='3', type='skill')
+        tags-list(category='primary', label='Primary', ul-class='two-columns', type='skill')
 
       .area
-        h4 Secondary
-        ul.inline-items
-          li: filter-tag(key='redis', type='skill')
-          li: filter-tag(key='memcached', type='skill')
-          li: filter-tag(key='coffee', type='skill')
-          li: filter-tag(key='sass', type='skill')
-          li: filter-tag(key='less', type='skill')
-          li: filter-tag(key='Sketch', type='skill')
-          li: filter-tag(key='git', type='skill')
-          li: filter-tag(key='gulp', type='skill')
-          li: filter-tag(key='digital-ocean', type='skill')
-          li: filter-tag(key='heroku', type='skill')
-          li: filter-tag(key='elastic-search', type='skill')
-          li: filter-tag(key='jquery', type='skill')
-          li: filter-tag(key='nginx', type='skill')
-          li: filter-tag(key='web-sockets', type='skill')
+        tags-list(category='secondary', label='Secondary', ul-class='inline-items', type='skill')
 
       .area
-        h4 Throwback
-        ul.inline-items
-          li: filter-tag(key='xml', disabled='true')
-          li: filter-tag(key='xslt', disabled='true')
-          li: filter-tag(key='svn', disabled='true')
-          li: filter-tag(key='flash', disabled='true')
-          li: filter-tag(key='asp-net', disabled='true')
-          li: filter-tag(key='asp', disabled='true')
+        tags-list(category='legacy', label='Throwback', ul-class='inline-items', type='skill')
 
 
     resume-section(label='Projects')
-      h4.header On Work Time
-      team(ng-repeat='team in teams', team='team')
+      h4.header @Work
+      team(ng-repeat='team in resume.teams | filter:{personal: false}', team='team')
 
-      h4.header On Personal Time
+      h4.header @Home
+      team(ng-repeat='team in resume.teams | filter:{personal: true}', team='team')
+
+    resume-section(label='Interests')
+      .area
+        h4 My Favorite Roles & Technologies
+        ul.inline-items
+          li Fullstack Web Development
+          li Ruby
+          li Ruby on Rails
+          li Node.js
+          li Docker
+          li CoffeeScript
+          li UX
+
+      .area
+        h4 Roles & Technologies I like to avoid
+        ul.inline-items
+          li Devops
+          li PHP
+          li Java
+
+      .area
+        h4 Roles & Technologies I want to learn or improve at
+        ul.inline-items
+          li Growth Hacking
+          li Product Management
+          li UX Design
+          li Mobile Development
+          li Flux/React
+          li Xamarin based iOS Apps
+          li Go
+          li Elixir
+
+      .area
+        h4 Challenges that interest me the most
+        ul.inline-items
+          li Framework & Library Development
+          li Recommendation/Matching Systems
+          li Communication/Messaging Systems
+          li Social Design
+          li Micro-service Oriented Architecture
+
+      .area
+        h4 My Personal Interests & Hobbies
+        ul.inline-items
+          li Food
+          li Health
+          li Music
+          li Bass Guitar
+          li Video Games
+          li Programming
+          li Drones
+
+    resume-section(label='Goals')
+      .area
+        h4 Career
+        ul
+          li Stay up-to-date with latest tech
+          li Work on something that I would personally use
+          li Build something that is innovative
+          li Early Retirement
+
+      .area
+        h4 Work Environment
+        ul
+          li Non-corporate vibe
+          li Passionate team
+          li Modern equipment
+          li Access to good food
+          li Freedom to explore innovative solutions
+
+    //resume-section(label='Critique')
+    //  .area
+    //    h4 My Top 3 Strongest Traits
+    //    ul.inline-items
+    //        li Creative Problem Solver
+    //        li Hard Worker
+    //        li Fast Learner
+    //
+    //  .area
+    //    h4 My Top 3 Weakest Traits
+    //    ul.inline-items
+    //        li Easy to Manage
+    //        li Strong life/work balance
+    //        li Highly Focused
+
+    resume-section(label='Social')
+      ul.inline-items
+          li: a Codewars
+          li: a Stack Overflow
+          li: a Quora
+          li: a Github
+          li: a Codepen
+          li: a Twitter
+
 
 
 

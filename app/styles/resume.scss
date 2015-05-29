@@ -1,6 +1,26 @@
 $section-label-width: 150px;
 
 .resume {
+  .active-filters {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: darken(white, 15%);
+    padding: $default-spacing;
+
+    h3 {
+      text-align: left;
+    }
+    span {
+      margin-left: 3px;
+      margin-right: $small-spacing;
+    }
+
+    a {
+      float: right;
+      @include clearfix;
+    }
+  }
   h1, h2 {
     text-align: center;
   }
@@ -84,11 +104,11 @@ $section-label-width: 150px;
     margin-bottom: $mega-spacing;
 
     h5 {
-      background-color: $gray;
-      color: white;
+      background-color: darken(white, 15%);
+      color: black;
       padding: $tiny-spacing;
 
-      span {
+      span.date {
         float: right;
       }
     }
@@ -152,6 +172,12 @@ $section-label-width: 150px;
 
       .role-details {
         margin-left: $small-spacing;
+      }
+    }
+
+    .project-details {
+      p {
+        margin-top: -$tiny-spacing;
       }
     }
 

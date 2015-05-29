@@ -1,0 +1,434 @@
+name: Jake Hoffner
+careerTitle: Fullstack Web Architect
+summary:
+  - 15 Years of professional software development experience
+  - Self-taught at the age of 19
+  - First professional job was at the age of 20
+  - Started as a designer & front-end developer
+  - Has worked on Federal, State, Military, B2B and Consumer applications
+  - Co-founded a VC funded startup in 2012
+  - 2x Startup Weekend Winner
+
+roles:
+  - name: Frontend Web Development
+    years: 15
+    category: primary
+
+  - name: Backend Web Development
+    years: 13
+    category: primary
+
+  - name: Web Architecture
+    years: 7
+    category: primary
+
+  - name: Technical Leadership
+    years: 7
+    category: primary
+
+  - name: Agile Project Management
+    years: 3
+    category: secondary
+
+  - name: Product Management
+    years: 3
+    category: secondary
+
+  - name: Devops
+    years: 0
+    category: secondary
+
+skills:
+  - name: Ruby
+    years: 3
+    category: primary
+
+  - name: Ruby on Rails
+    years: 3
+    category: primary
+
+  - name: JavaScript
+    years: 15
+    category: primary
+
+  - name: AngularJS
+    years: 0
+    category: primary
+
+  - name: HTML/CSS
+    years: 15
+    category: primary
+
+  - name: Node.js
+    years: 3
+    category: primary
+
+  - name: AWS
+    years: 0
+    category: primary
+
+  - name: Docker
+    years: 1
+    category: primary
+
+  - name: MongoDB
+    years: 5
+    category: primary
+
+  - name: MS SQL Server
+    years: 10
+    category: primary
+
+  - name: C#
+    years: 9
+    category: primary
+
+  - name: ASP.NET MVC
+    years: 3
+    category: primary
+
+  - name: Redis
+    category: secondary
+
+  - name: Memcached
+    category: secondary
+
+  - name: CoffeeScript
+    category: secondary
+
+  - name: Sass
+    category: secondary
+
+  - name: Less
+    category: secondary
+
+  - name: Sketch
+    category: secondary
+
+  - name: Git
+    category: secondary
+
+  - name: Gulp
+    category: secondary
+
+  - name: Digital Ocean
+    category: secondary
+
+  - name: Heroku
+    category: secondary
+
+  - name: Elastic Search
+    category: secondary
+
+  - name: jQuery
+    category: secondary
+
+  - name: Nginx
+    category: secondary
+
+  - name: Web Sockets
+    category: secondary
+
+  - name: XML
+    category: legacy
+
+  - name: XSLT
+    category: legacy
+
+  - name: SVN
+    category: legacy
+
+  - name: Flash
+    category: legacy
+
+  - name: ASP.NET
+    category: legacy
+
+  - name: ASP
+    category: legacy
+
+
+teams:
+    - personal: false
+      name: "Entrefuse"
+      date: "Oct 2012 - Present"
+      title: "CTO"
+      summary: "My responsibility as CTO required me to handle all initial development before the team expanded. My role grew into more of a leadership role as the team expanded."
+      roles:
+        - "Backend Web Development"
+        - "Frontend Web Development"
+        - "Web Architecture"
+        - "Technical Leadership"
+        - "Agile Project Management"
+        - "Product Management"
+        - "Devops"
+      projects:
+        - name: "Codewars.com"
+          type: "Website"
+          url: "http://www.codewars.com"
+          summary: "Codewars.com that enables developers to dramatically improve their coding skills through the use of small coding challenges called \"kata\"."
+          skills:
+            - "Ruby on Rails"
+            - "Ruby"
+            - "JavaScript"
+            - "CoffeeScript"
+            - "Git"
+            - "MongoDB"
+            - "Web Sockets"
+            - "jQuery"
+            - "Sass"
+          roles:
+            -
+              name: "Backend Web Development"
+              skills:
+                - "Ruby on Rails"
+                - "Ruby"
+                - "Git"
+                - "MongoDB"
+                - "Redis"
+                - "Memcached"
+                - "Web Sockets"
+              highlights:
+                -
+                  text: "Extended <span class='tag'>Rails</span> to handle the concept known as PJAX on a more integrated and deeper level"
+                  skills:
+                    - "Ruby on Rails"
+                    - "Ruby"
+                    - "JavaScript"
+                -
+                  text: "Implemented a concept dubbed DJAX (Deferred AJAX) to allow <span class='tag'>Rails</span> to handle slow-client requests by leveraging <span class='tag'>Web Sockets</span> and <span class='tag'>Redis</span>."
+                  skills:
+                    - "Ruby on Rails"
+                    - "Ruby"
+                    - "Redis"
+                    - "Web Sockets"
+            -
+              name: "Frontend Web Development"
+              skills:
+                - "jQuery"
+                - "CoffeeScript"
+                - "Sass"
+                - "HTML/CSS5"
+              highlights:
+                -
+                  text: "Wrote all of the front-end codebase myself."
+                -
+                  text: "Built a custom client-side templating engine complete with limited two-way bindings utilizing <span class='tag'>jQuery</span> as the core framework"
+                  skills:
+                    - "CoffeeScript"
+                    - "jQuery"
+                -
+                  text: "Built a custom client-side application framework built on top of <span class='tag'>jQuery</span> that uses a hybrid design leveraging PJAX."
+                  skills:
+                    - "CoffeeScript"
+                    - "jQuery"
+            -
+              name: "Web Architecture"
+              skills:
+                - "Ruby on Rails"
+                - "Docker"
+                - "Nginx"
+                - "Memcached"
+                - "Redis"
+              highlights:
+                -
+                  text: "Architected the entire <span class='tag'>Rails</span> API and <span class='tag'>MongoDB</span> data model for the site."
+                  skills:
+                    - "Ruby on Rails"
+                    - "MongoDB"
+                -
+                  text: "Utilized advanced caching techniques by leveraging <span class=\"tag\">Redis</span> and <span class=\"tag\">Memcached</span> services together"
+                  skills:
+                    - "Redis"
+                    - "Memcached"
+        -
+          name: "Strive.co"
+          url: "http://strive.co"
+          type: "Website"
+          summary: "Strive.co is recruitement based product focused on placing skilled web developers into their dream positions."
+          roles:
+            -
+              name: "Backend Web Development"
+              skills:
+                - "Ruby on Rails"
+                - "Ruby"
+                - "nodejs"
+                - "JavaScript"
+                - "Docker"
+                - "Git"
+                - "MongoDB"
+                - "Redis"
+                - "Memcached"
+                - "Web Sockets"
+                - "Nginx"
+              samples:
+                -
+                  name: "jBuilder Model Serializer"
+                  skills:
+                    - "Ruby on Rails"
+                -
+                  name: "Filter API"
+                  skills:
+                    - "Ruby on Rails"
+
+              highlights:
+                -
+                  text: "Improved jbuilder performance by bypassing the need to use the <span class='tag'>Rails</span> templating system."
+                  skills:
+                    - "Ruby on Rails"
+                -
+                  text: "Built a sophisticated and flexible <span class='tag'>Rails</span> API scheme that allowed for multiple front-end clients to interface with it."
+                  skills:
+                    - "Ruby on Rails"
+                -
+                  text: "Implemented a micro-service oriented architecture leveraging <span class='tag'>Docker</span> and <span class='tag'>Nginx</span> to link <span class='tag'>Node.js</span> and <span class='tag'>Rails</span> services together."
+                  skills:
+                    - "Ruby on Rails"
+                    - "Docker"
+                    - "Nginx"
+                    - "nodejs"
+            -
+              name: "Frontend Web Development"
+              skills:
+                - "AngularJS"
+                - "JavaScript"
+                - "Less"
+                - "Gulp"
+              highlights:
+                -
+                  text: "Quickly learned <span class=\"tag\">Angular.JS</span> so that I could contribute to the codebase along with the rest of the front-end team."
+                  skills:
+                    - "AngularJS"
+                    - "JavaScript"
+            -
+              name: "Web Architecture"
+              skills:
+                - "Ruby on Rails"
+                - "Docker"
+                - "Nginx"
+                - "Memcached"
+                - "Redis"
+              highlights:
+                -
+                  text: "Architected the entire <span class='tag'>Rails</span> API and <span class='tag'>MongoDB</span> data model for the site."
+                  skills:
+                    - "Ruby on Rails"
+                    - "MongoDB"
+                -
+                  text: "Utilized advanced caching techniques by leveraging <span class=\"tag\">Redis</span> and <span class=\"tag\">Memcached</span> services together"
+                  skills:
+                    - "Redis"
+                    - "Memcached"
+
+        - name: 'Stateful'
+          type: 'Ruby Gem'
+          summary: 'A simple state machine for Ruby.'
+          roles:
+            - name: 'Backend Web Development'
+              skills:
+                - Ruby
+                - Mongoid
+
+        - name: 'Mongoidal'
+          type: 'Ruby Gem'
+          summary: 'Mongoid on steroids'
+          roles:
+            - name: 'Backend Web Development'
+              skills:
+                - Ruby
+                - Mongoid
+
+        - name: 'Batcan'
+          type: 'Ruby Gem'
+          summary: 'Simple and expressive permissions system for Ruby on Rails projects'
+          roles:
+            - name: 'Backend Web Development'
+              skills:
+                - Ruby
+                - Ruby on Rails
+    -
+      personal: false
+      name: "DirecTV"
+      date: "2008 - 2012"
+      title: "Lead Web Developer"
+      roles:
+        - "Frontend Web Development"
+        - "Backend Web Development"
+        - "Agile Project Management"
+      projects:
+        -
+          name: "directv.com"
+          url: "http://www.directv.com"
+          type: "Website"
+          summary: "I lead the JavaScript development team for the .com team"
+          roles:
+            -
+              name: "Frontend Web Development"
+              skills:
+                - "JavaScript"
+                - "HTML/CSS"
+                - "Prototype.JS"
+              samples:
+                -
+                  name: "Example \"Behavior\" component"
+                  skills:
+                    - "JavaScript"
+
+              highlights:
+                -
+                  text: "Rebuilt the legacy codebase to use a more modern framework approach while still leveraging the underlying <span class='tag'>Prototype.JS</span> library."
+                  skills:
+                    - "JavaScript"
+                    - "Prototype.JS"
+            -
+              name: "Backend Web Development"
+              skills:
+                - "Java"
+                - "JSP"
+              highlights:
+                -
+                  text: "Was responsible for light weight integration of the Backend Web Development ATG/Java components with the Frontend Web Development codebase."
+                  skills:
+                    - "Java"
+                    - "JSP"
+    -
+      personal: true
+      name: "Side Projects"
+      roles:
+        - "Frontend Web Development"
+        - "Backend Web Development"
+        - "UX Design"
+        - "Web Design"
+      projects:
+        -
+          name: "Reqeo"
+          type: "Website"
+          summary: "A startup idea based on recommendations for users based off of mutual followers and interests."
+          roles:
+            -
+              name: "Frontend Web Development"
+              skills:
+                - "JavaScript"
+                - "HTML/CSS"
+                - "jQuery"
+              highlights:
+                -
+                  text: "Built a custom client-side framework on top of <span class='tag'>jQuery</span> to ease and DRY up development efforts. This framework was part of a similar design that I had been evolving over the passed 3 years."
+                  skills:
+                    - "JavaScript"
+                    - "jQuery"
+            -
+              name: "Backend Web Development"
+              skills:
+                - "C#"
+                - "aspnetmvc"
+                - "Lucene"
+                - "MS SQL Server"
+                - "MongoDB"
+              highlights:
+                -
+                  text: "Utilizing a non-standard open source ORM, I created a repository based data model that leveraged both <span class='tag'>SQL Server</span> and <span class='tag'>MongoDB</span> with a CQRS influenced architectual pattern."
+                  skills:
+                    - "C#"
+                    - "MongoDB"
+                    - "MS SQL Server"

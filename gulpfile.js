@@ -2,7 +2,8 @@
 
 var gulp = require('gulp'),
   jade = require('jade'),
-  modRewrite = require('connect-modrewrite');
+  modRewrite = require('connect-modrewrite'),
+  yaml = require('gulp-yaml');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'del', 'browser-sync']
@@ -54,6 +55,19 @@ gulp.task('views:dist', function(){
       pretty: true
     }))
     .pipe(gulp.dest('build/dist/views'));
+});
+
+// Yaml
+gulp.task('yaml:dev', function(){
+  return gulp.src('app/resume.yml')
+    .pipe(yaml())
+    .pipe(gulp.dest('build/dev'));
+});
+
+gulp.task('yaml:dist', function(){
+  return gulp.src('app/resume.yml')
+    .pipe(yaml())
+    .pipe(gulp.dest('build/dist'));
 });
 
 // Sass
@@ -153,6 +167,10 @@ gulp.task('default', ['dev', 'serve:dev'], function(callback) {
     .pipe($.jade({jade: jade, pretty: true}))
     .pipe(gulp.dest('build/dev/views'));
 
+  // Yaml
+  gulp.watch('app/resume.yml', ['yaml:dev']);
+  gulp.watch('build/dev/resume.json', ['html:dev']);
+
   // Htmls
   gulp.watch('build/dev/views/**/*.html', ['html:dev']);
 
@@ -161,7 +179,7 @@ gulp.task('default', ['dev', 'serve:dev'], function(callback) {
 });
 
 // Development
-gulp.task('dev', ['clean', 'bower', 'webpack', 'sass', 'views:dev', 'html:dev']);
+gulp.task('dev', ['clean', 'bower', 'webpack', 'sass', 'views:dev', 'html:dev', 'yaml:dev']);
 
 gulp.task('deps', ['html:dist'], function () {
   var assets = $.useref.assets();

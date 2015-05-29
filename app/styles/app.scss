@@ -49,15 +49,36 @@ main {
   @include clearfix;
 }
 
-.two-columns {
+div.two-columns {
   float: left;
   width: 50%;
 }
-
-ul.two-columns, .area.two-columns ul {
+.area.two-columns ul {
   li {
     margin-right: 30px;
     line-height: 24px;
+  }
+}
+
+ul.two-columns {
+  @include clearfix;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    line-height: 24px;
+    margin-left: $big-spacing;
+    margin-right: -$big-spacing;
+    float: left;
+    width: 50%;
+
+    &:before {
+      content: '\25CB';
+      font-size: 13px;
+      margin-right: 8px;
+      color: black;
+      font-weight: bold;
+    }
   }
 }
 

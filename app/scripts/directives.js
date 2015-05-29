@@ -6,7 +6,7 @@ angular
   .directive('filterTag', filterTag)
   .directive('highlight', highlight)
   .directive('clearFilters', clearFilters)
-  .directive('project', project)
+  .directive('tagsList', tagsList)
   .directive('team', team)
   .directive('tagsUsed', tagsUsed);
 
@@ -31,9 +31,6 @@ function team () {
     scope: { team: '=' },
     templateUrl: 'views/directives/team.html',
     link: function(scope) {
-      scope.roleName = function(role) {
-        return scope.$parent.tags[role.key];
-      }
 
       scope.shouldShowHighlights = function(role) {
         let skillKey = scope.$parent.skill;
@@ -47,7 +44,7 @@ function team () {
       }
 
       scope.shouldShowRole = function(role){
-        if (scope.$parent.role && scope.$parent.role != role.key) {
+        if (scope.$parent.role && scope.$parent.role != role.name) {
           return false;
         }
 
@@ -63,7 +60,7 @@ function team () {
 
         if (roleKey) {
           let existing = project.roles.some(function(role) {
-            return role.key === roleKey;
+            return role.name === roleKey;
           });
 
           if (!existing) return false;
@@ -99,18 +96,6 @@ function team () {
   };
 }
 
-function project () {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: { project: '=' },
-    templateUrl: 'views/directives/project.html',
-    link: function(scope) {
-    }
-  };
-}
-
-
 function highlight () {
   return {
     restrict: 'E',
@@ -145,32 +130,40 @@ function tagsUsed () {
   return {
     restrict: 'E',
     transclude: true,
-    scope: { tags: '@', items: '=', label: '@', type: '@' },
-    templateUrl: 'views/directives/tags-used.html',
+    scope: {items: '=', label: '@', type: '@'},
+    templateUrl: 'views/directives/tags-used.html'
+  };
+}
+
+function tagsList () {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: { label: '@', category: '@', ulClass: '@', collection: '=', type: '@' },
+    templateUrl: 'views/directives/tags-list.html',
     link: function(scope) {
-      if (!scope.items) {
-        scope.items = scope.tags.split(',')
+      if (!scope.collection) {
+        scope.collection = scope.$root.resume[scope.type + 's'];
       }
+      scope.items = scope.collection.filter(function(skill) {
+        return skill.category == scope.category;
+      });
     }
   };
 }
 
-function filterTag () {
+function filterTag ($document) {
   return {
     restrict: 'E',
-    scope: { key: '@', years: '@', label: '@', type: '@', disabled: '=' },
+    scope: { years: '@', label: '@', type: '@', disabled: '=' },
     templateUrl: 'views/directives/filter-tag.html',
     link: function(scope, el) {
-      if (!scope.label) {
-        scope.label = scope.$root.tags[scope.key]
-      }
-
       scope.cssClass = function() {
-        return scope.$root[scope.type] === scope.key ? 'active' : '';
+        return scope.$root[scope.type] === scope.label ? 'active' : '';
       }
 
       scope.filter = function() {
-        scope.$root.filter(scope.type, scope.key);
+        scope.$root.filter(scope.type, scope.label);
       }
 
       scope.yearName = function() {
@@ -184,7 +177,14 @@ function filterTag () {
         }
       }
 
-
+      // after a user clicks on a filter we don't want the page to jump
+      el.on('click', function(ev) {
+        console.log(ev);
+        setTimeout(function() {
+          // clientY helps restore the offset, -10 helps fix a jitter issue
+          $document.scrollToElement(el, ev.clientY - 10);
+        }, 100);
+      });
     }
   };
 }
