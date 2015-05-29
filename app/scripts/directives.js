@@ -32,10 +32,17 @@ function team () {
     templateUrl: 'views/directives/team.html',
     link: function(scope) {
 
-      scope.shouldShowHighlights = function(role) {
-        let skillKey = scope.$parent.skill;
+      scope.shouldShowGroup = function(project, group) {
+        var roleKey = scope.$parent.role;
+        if (roleKey) {
+          return project[group].some(function(hl) {
+            return (hl.roles || []).indexOf(roleKey) >= 0;
+          });
+        }
+
+        var skillKey = scope.$parent.skill;
         if (skillKey) {
-          return role.highlights.some(function(hl) {
+          return project[group].some(function(hl) {
             return (hl.skills || []).indexOf(skillKey) >= 0;
           });
         }
@@ -43,48 +50,34 @@ function team () {
         return true;
       }
 
-      scope.shouldShowRole = function(role){
-        if (scope.$parent.role && scope.$parent.role != role.name) {
-          return false;
-        }
-
-        if (scope.$parent.skill && role.skills.indexOf(scope.$parent.skill) == -1) {
-          return false;
-        }
-
-        return true;
-      }
-
-      scope.shouldShowProject = function(project) {
-        let roleKey = scope.$parent.role;
-
+      scope.shouldShowItem = function(item) {
+        var roleKey = scope.$parent.role;
         if (roleKey) {
-          let existing = project.roles.some(function(role) {
-            return role.name === roleKey;
-          });
-
-          if (!existing) return false;
+          if ((item.roles || []).indexOf(roleKey) == -1) return false;
         }
 
-        let skillKey = scope.$parent.skill;
-        if (skillKey && !projectHasSkill(project, skillKey)) {
-          return false;
+        var skillKey = scope.$parent.skill;
+        if (skillKey) {
+          if ((item.skills || []).indexOf(skillKey) == -1) return false;
         }
 
         return true;
       }
 
       scope.shouldShowTeam = function() {
-        let roleKey = scope.$parent.role;
+        var roleKey = scope.$parent.role;
 
-        if (roleKey && scope.team.roles.indexOf(roleKey) == -1) {
-          return false;
+        if (roleKey) {
+          var existing = (scope.team.projects || []).some(function(project) {
+            return project.roles.indexOf(roleKey) >= 0;
+          });
+          if (!existing) false;
         }
 
-        let skillKey = scope.$parent.skill;
+        var skillKey = scope.$parent.skill;
         if (skillKey) {
-          let existing = (scope.team.projects || []).some(function(project) {
-            return projectHasSkill(project, skillKey)
+          var existing = (scope.team.projects || []).some(function(project) {
+            return project.skills.indexOf(skillKey) >= 0;
           });
 
           if (!existing) return false;
@@ -94,7 +87,7 @@ function team () {
       }
 
       scope.filterName = function() {
-        return $scope.$root.role || $scope.$root.skill;
+        return scope.$root.role || scope.$root.skill;
       }
     }
   };
@@ -107,7 +100,7 @@ function highlight () {
     template: '<li ng-if="shouldShow()" ng-bind-html="html()"></li>',
     link: function(scope) {
       scope.html = function() {
-        let text = scope.item.text;
+        var text = scope.item.text;
         (scope.item.skills || []).forEach(function(skill) {
           text = text.replace(new RegExp(skill, "g"), "<span class='tag'>" + skill + "</span>");
         });
@@ -118,7 +111,7 @@ function highlight () {
         return text;
       }
       scope.shouldShow = function() {
-        let skillKey = scope.$root.skill;
+        var skillKey = scope.$root.skill;
         if (skillKey) {
           return (scope.item.skills || []).indexOf(skillKey) >= 0;
         }
