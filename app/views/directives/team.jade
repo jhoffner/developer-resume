@@ -7,7 +7,7 @@
     p(ng-if='team.summary') {{team.summary}}
 
 
-    .project(ng-repeat='project in team.projects')
+    .project(ng-repeat='project in team.projects', id='{{project.name}}')
       h4
         a(href="{{project.url}}") {{project.name}}
         span {{project.type}}
@@ -35,12 +35,12 @@
               div(hljs, class="language-{{activeSample.language}}", language="{{activeSample.language}}" source="activeSample.code")
             .notice(ng-if='!shouldShowGroup(project, "samples")')
               | There are no {{filterName()}} related samples to show.
-              clear-filters
+              //clear-filters
 
         .notice(ng-if='!shouldShowItem(project)')
           | This project is not relevant to {{filterName()}}.
-          clear-filters
+          //clear-filters
 
   .notice(ng-if='!shouldShowTeam()')
     | This item is not relevant to {{filterName()}}.
-    clear-filters
+    //clear-filters

@@ -1,5 +1,6 @@
 name: Jake Hoffner
 careerTitle: Fullstack Web Architect
+location: Los Angeles, CA
 summary:
   - 15 Years of professional software development experience
   - Self-taught at the age of 19
@@ -418,7 +419,7 @@ teams:
               - "Devops"
 
       - name: 'Stateful'
-        type: 'Ruby Gem'
+        type: 'Open Source'
         summary: 'A simple state machine for Ruby.'
         roles:
           - 'Backend Web Development'
@@ -427,7 +428,7 @@ teams:
           - Mongoid
 
       - name: 'Mongoidal'
-        type: 'Ruby Gem'
+        type: 'Open Source'
         summary: 'Mongoid on steroids'
         roles:
           - 'Backend Web Development'
@@ -436,7 +437,7 @@ teams:
           - Mongoid
 
       - name: 'Batcan'
-        type: 'Ruby Gem'
+        type: 'Open Source'
         summary: 'Simple and expressive permissions system for Ruby on Rails projects'
         roles:
           - 'Backend Web Development'
@@ -493,8 +494,8 @@ teams:
             roles:
               - "Backend Web Development"
       - name: "DPEG"
-        type: "Internal Prototype Framework"
-        summary: "As a part of a team dedicated to exploring innovative forward thinking products, I created an internal tool for prototyping."
+        type: "Website"
+        summary: "As a part of a team dedicated to exploring innovative forward thinking products, I created an internal tool for prototyping web apps."
         roles:
           - "Backend Web Development"
           - "Frontend Web Development"

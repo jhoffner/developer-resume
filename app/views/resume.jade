@@ -1,14 +1,40 @@
 .resume
-  .active-filters(ng-if='skill || role')
-    h3 Active Filter
-    div(ng-if='role')
-      b Role:
-      span {{tagLabel(role)}}
-      a(ng-click='filter("role", role)') Remove
-    div(ng-if='skill')
-      b Skill:
-      span {{tagLabel(skill)}}
-      a(ng-click='filter("skill", skill)') Remove
+  .sidebar.top
+
+  .sidebar.bottom
+    .area(scroll, ng-show='visible', ng-class="{alt: !activeFilter()}")
+      h3 {{resume.name}}
+      .content
+        h4 {{resume.careerTitle}}
+        h4 {{resume.location}}
+    .area.alt(ng-if='activeFilter()')
+      h3 Active Filter
+      div
+        div(ng-if='role')
+          b Role:
+          span {{tagLabel(role)}}
+          a(ng-click='filter("role", role)') Remove
+
+        div(ng-if='skill')
+          b Skill:
+          span {{tagLabel(skill)}}
+          a(ng-click='filter("skill", skill)') Remove
+
+        .content(ng-if="filteredProjects")
+          h4 Related Projects:
+          ul
+            li(ng-repeat='project in filteredProjects')
+              a(ng-click="goto(project.name)") {{project.name}}
+
+
+    //.area.alt
+    //  h3 View
+    //  ul.inline-items.content
+    //    li Resume
+    //    li: a Coversheet
+    .area
+      h3 Personal Notes
+      p You can leave notes here and they will persist between sessions.
 
   h1 {{resume.name}}
   h2(ng-if='resume.careerTitle') {{resume.careerTitle}}

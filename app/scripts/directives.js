@@ -8,7 +8,8 @@ angular
   .directive('clearFilters', clearFilters)
   .directive('tagsList', tagsList)
   .directive('team', team)
-  .directive('tagsUsed', tagsUsed);
+  .directive('tagsUsed', tagsUsed)
+  .directive('scroll', scroll);
 
 function resumeSection () {
   return {
@@ -208,6 +209,19 @@ function filterTag ($document) {
       el.on('click', function(ev) {
         // clientY helps restore the offset, -10 helps fix a jitter issue
         $document.scrollToElement(el, ev.clientY - 10, 0);
+      });
+    }
+  };
+}
+
+function scroll($window) {
+  return {
+    restrict: 'A',
+    link: function (scope, el) {
+      scope.visible = $window.scrollY > 95;
+      angular.element($window).bind("scroll", function() {
+        scope.visible = $window.scrollY > 95;
+        scope.$apply();
       });
     }
   };

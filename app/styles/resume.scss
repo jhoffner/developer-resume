@@ -1,15 +1,35 @@
 $section-label-width: 150px;
 
 .resume {
-  .active-filters {
+  .sidebar {
     position: fixed;
-    bottom: 0;
     left: 0;
+    width: 20%;
     background-color: darken(white, 15%);
-    padding: $default-spacing;
 
+    &.top {
+      top: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+
+    .area {
+      padding: $default-spacing;
+      &:first-of-type {
+        h3 {
+//          margin-top: $small-spacing;
+        }
+      }
+
+      &.alt {
+        background-color: darken(white, 11%);
+      }
+    }
     h3 {
       text-align: left;
+      margin-top: $big-spacing;
     }
     div > {
       span {
@@ -21,6 +41,10 @@ $section-label-width: 150px;
         float: right;
         @include clearfix;
       }
+    }
+
+    .content {
+      margin-left: -$big-spacing;
     }
   }
   h1, h2 {
