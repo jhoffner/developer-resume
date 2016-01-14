@@ -29,7 +29,7 @@ function team ($http) {
 
   return {
     restrict: 'E',
-    scope: { team: '=' },
+    scope: { team: '=', view: '=' },
     templateUrl: 'views/directives/team.html',
     link: function(scope) {
 

@@ -4,49 +4,68 @@ $section-label-width: 150px;
   .sidebar {
     position: fixed;
     left: 0;
-    width: 20%;
-    background-color: darken(white, 15%);
-
-    &.top {
-      top: 0;
-    }
-
-    &.bottom {
-      bottom: 0;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    overflow: auto;
+    background-color: $sidebar-bgcolor;
+    padding-top: $big-spacing;
+    @media (max-width: $mobile-width) {
+      display: none;
     }
 
     .area {
       padding: $default-spacing;
-      &:first-of-type {
-        h3 {
-//          margin-top: $small-spacing;
-        }
-      }
-
       &.alt {
-        background-color: darken(white, 11%);
+        background-color: $sidebar-alt-bgcolor;
       }
     }
     h3 {
       text-align: left;
-      margin-top: $big-spacing;
     }
+
     div > {
       span {
-        margin-left: 3px;
-        margin-right: $small-spacing;
-      }
-
-      a {
-        float: right;
-        @include clearfix;
+        b {
+          text-transform: uppercase;
+        }
+        a {
+          float: right;
+          @include clearfix;
+        }
       }
     }
 
     .content {
       margin-left: -$big-spacing;
     }
+
+    .links {
+      ul { padding: 0; margin-right: -1.5rem; }
+      li {
+        display: block;
+        width: 50%;
+        padding: .5rem 2rem;
+        padding-right: 1rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        float: left;
+
+        &.active {
+          background-color: $sidebar-alt-bgcolor;
+        }
+      }
+    }
   }
+
+  .page-title {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
   h1, h2 {
     text-align: center;
   }
@@ -63,11 +82,13 @@ $section-label-width: 150px;
 
   h3 {
     text-transform: uppercase;
-    margin-top: 0;
     font-size: 20px;
-    text-align: right;
-    margin-right: $big-spacing;
     letter-spacing: 0.7px;
+    @media (min-width: $mobile-width) {
+      margin-top: 0;
+      text-align: right;
+      margin-right: $big-spacing;
+    }
   }
 
   h4 {
@@ -98,6 +119,10 @@ $section-label-width: 150px;
   }
 
   article {
+    margin-top: 3rem;
+    @media (max-width: $mobile-width) {
+      margin-top: 0;
+    }
   }
 
   section {
@@ -105,14 +130,18 @@ $section-label-width: 150px;
     margin-bottom: $huge-spacing;
 
     .label {
-      float: left;
-      width: $section-label-width;
+      @media (min-width: $mobile-width) {
+        float: left;
+        width: $section-label-width;
+      }
       color: $text-color;
     }
 
     .content {
-      border-left: 2px solid darken(white, 10%);
-      margin-left: $section-label-width;
+      @media (min-width: $mobile-width) {
+        border-left: 2px solid darken(white, 10%);
+        margin-left: $section-label-width;
+      }
 
       ul {
         list-style-type: circle;
@@ -134,7 +163,7 @@ $section-label-width: 150px;
       font-size: 18px;
       font-weight: bold;
       color: black;
-      padding: $tiny-spacing;
+      padding: $tiny-spacing 0;
 
       span.date {
         float: right;

@@ -2,49 +2,76 @@
   .sidebar.top
 
   .sidebar.bottom
-    .area(scroll, ng-show='visible', ng-class="{alt: !activeFilter()}")
+    .area(scroll)
       h3 {{resume.name}}
       .content
         h4 {{resume.careerTitle}}
         h4 {{resume.location}}
-    .area.alt(ng-if='activeFilter()')
-      h3 Active Filter
-      div
+
+    .area.links
+      h3 About Me
+      .content
+        ul
+          li: a(ng-click="goto('summary')") Summary
+          li: a(ng-click="goto('roles')") Roles
+          li: a(ng-click="goto('skills')") Skills
+          li: a(ng-click="goto('experience')") Experience
+          li: a(ng-click="goto('interests')") Interests
+          li: a(ng-click="goto('goals')") Goals
+          li: a(ng-click="goto('articles')") Articles
+          li: a(ng-click="goto('social')") Social
+
+    .area.links
+      h3 View
+      .content
+        ul
+          li(ng-class="{active: view === 'detailed'}"): a(ng-click="view = 'detailed'") Detailed
+          li(ng-class="{active: view === 'simple'}"): a(ng-click="view = 'simple'") Simple
+
+    .area(ng-class="{alt: activeFilter()}")
+      h3 Filter
+      div(ng-hide="activeFilter()")
+        | Click a role or skill to filter content.
+      div(ng-show="activeFilter()")
         div(ng-if='role')
-          b Role:
-          span {{tagLabel(role)}}
-          a(ng-click='filter("role", role)') Remove
+          span
+            b Role:
+            a(ng-click='filter("role", role)') remove
+          div {{tagLabel(role)}}
 
         div(ng-if='skill')
-          b Skill:
-          span {{tagLabel(skill)}}
-          a(ng-click='filter("skill", skill)') Remove
+          span
+            b Skill:
+            a(ng-click='filter("skill", skill)') remove
+          div {{tagLabel(skill)}}
 
         .content(ng-if="filteredProjects")
-          h4 Related Projects:
+          h4 Related Experience:
           ul
             li(ng-repeat='project in filteredProjects')
               a(ng-click="goto(project.name)") {{project.name}}
-
 
     //.area.alt
     //  h3 View
     //  ul.inline-items.content
     //    li Resume
     //    li: a Coversheet
-    .area
-      h3 Personal Notes
-      p You can leave notes here and they will persist between sessions.
+    //.area
+    //  h3 Personal Notes
+    //  p You can leave notes here and they will persist between sessions.
 
-  h1 {{resume.name}}
-  h2(ng-if='resume.careerTitle') {{resume.careerTitle}}
+  .page-header
+    h1 Resume
+  .page-title
+    h1 {{resume.name}}
+    h2(ng-if='resume.careerTitle') {{resume.careerTitle}}
 
   article
-    resume-section(label='Summary')
+    resume-section#summary(label='Summary')
       ul
         li(ng-repeat='item in resume.summary') {{item}}
 
-    resume-section(label='Roles')
+    resume-section#roles(label='Roles')
       .area
         .two-columns
           tags-list(category='primary', label='Primary', type='role')
@@ -53,7 +80,7 @@
           tags-list(category='secondary', label='Secondary', type='role')
 
 
-    resume-section(label='Skills')
+    resume-section#skills(label='Skills')
       .area
         tags-list(category='primary', label='Primary', ul-class='two-columns', type='skill')
 
@@ -64,26 +91,26 @@
         tags-list(category='legacy', label='Throwback', ul-class='inline-items', type='skill')
 
 
-    resume-section(label='Projects')
+    resume-section#experience(label='Experience')
       h4.header @Work
-      team(ng-repeat='team in resume.teams | filter:{personal: false}', team='team')
+      team(ng-repeat='team in resume.teams | filter:{personal: false}', team='team', view='view')
 
-      h4.header @Play
-      team(ng-repeat='team in resume.teams | filter:{personal: true}', team='team')
+      h4.header @Home
+      team(ng-repeat='team in resume.teams | filter:{personal: true}', team='team', view='view')
 
-    resume-section(label='Interests', ng-if='resume.interests')
+    resume-section#interests(label='Interests', ng-if='resume.interests')
       .area(ng-repeat='area in resume.interests')
         h4 {{area.category}}
         ul.inline-items
           li(ng-repeat='item in area.items') {{item}}
 
-    resume-section(label='Goals', ng-if='resume.goals')
+    resume-section#goals(label='Goals', ng-if='resume.goals')
       .area(ng-repeat='area in resume.goals')
         h4 {{area.category}}
         ul
           li(ng-repeat='item in area.items') {{item}}
 
-    resume-section(label='Articles', ng-if='resume.articles')
+    resume-section#articles(label='Articles', ng-if='resume.articles')
       .area(ng-repeat='area in resume.articles')
         h4(ng-if="area.category") {{area.category}}
         ul
@@ -105,7 +132,7 @@
     //        li Strong life/work balance
     //        li Highly Focused
 
-    resume-section(label='Social')
+    resume-section#social(label='Social')
       ul.inline-items
           li: a Codewars
           li: a Stack Overflow

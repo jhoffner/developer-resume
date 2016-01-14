@@ -4,16 +4,17 @@ angular
   .module('app')
   .controller('AppController', AppController);
 
-AppController.$inject = ['$rootScope', '$http', '$document'];
+AppController.$inject = ['$rootScope', '$http', '$document', '$window', '$timeout'];
 
-function AppController($scope, $http, $document){
+function AppController($scope, $http, $document, $window, $timeout){
   $http.get('resume.json')
     .success(function(data) {
       $scope.resume = data;
     });
 
   $scope.name = 'Jake Hoffner';
-  $scope.careerTitle = 'Fullstack Web Architect';
+  $scope.careerTitle = 'CTO / Web Architect';
+  $scope.view = 'detailed';
 
   $scope.tagLabel = function(tag) {
     return tag.name || tag;
@@ -51,3 +52,5 @@ function AppController($scope, $http, $document){
     $document.scrollToElement(el, 50, 200);
   }
 }
+
+

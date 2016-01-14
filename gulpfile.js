@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
   jade = require('jade'),
   modRewrite = require('connect-modrewrite'),
-  yaml = require('gulp-yaml');
+  yaml = require('gulp-yaml'),
+  ghPages = require('gulp-gh-pages');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'del', 'browser-sync']
@@ -198,7 +199,7 @@ gulp.task('deps', ['html:dist'], function () {
     // Brings back the previously filtered HTML files
     .pipe(assets.restore())
     // Parses build blocks in html to replace references to non-optimized scripts or stylesheets
-    .pipe($.useref())
+    .pipe($.useref({base: '/developer-resume'}))
     // Rewrites occurences of filenames which have been renamed by rev
     .pipe($.revReplace())
     // Minifies html
@@ -214,7 +215,7 @@ gulp.task('deps', ['html:dist'], function () {
 });
 
 // Distribution
-gulp.task('dist', ['wiredep', 'dev', 'images', 'htaccess', 'views:dist'], function () {
+gulp.task('dist', ['clean', 'wiredep', 'dev', 'images', 'htaccess', 'views:dist', 'yaml:dist'], function () {
   gulp.start('deps');
 });
 
@@ -222,4 +223,9 @@ gulp.task('serveprod', function() {
   return gulp.src('build/dev/views/index.html')
     .pipe(gulp.dest('build/dev'))
     .pipe($.browserSync.reload({stream:false}));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/dist/**/*')
+    .pipe(ghPages());
 });

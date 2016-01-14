@@ -22,7 +22,7 @@ function appConfig ($stateProvider, $urlRouterProvider, $locationProvider) {
   var routes = [
     {
       name: 'resume',
-      path: 'resume'
+      path: ''
     },
     {
       name: 'about',

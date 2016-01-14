@@ -43,7 +43,8 @@
     "json-loader": "^0.5.1",
     "protractor": "^1.5.0",
     "wiredep": "^2.2.2",
-    "gulp-yaml": "~0.2.4"
+    "gulp-yaml": "~0.2.4",
+    "gulp-gh-pages": "~0.5.2"
   },
   "dependencies": {
     "gulp": "~3.8.10",

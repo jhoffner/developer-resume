@@ -31,10 +31,15 @@ footer {
 }
 
 main {
-  width: auto;
-  min-width: $page-width;
-  max-width: 60%;
-  padding: 0 15px;
+  &.container {
+    @media (min-width: $mobile-width) {
+      width: calc(100% - 270px);
+      max-width: $page-width;
+      margin-left: 270px;
+    }
+  }
+
+  padding: 0 30px;
 }
 .container .text-muted {
   margin: $default-spacing 0;
