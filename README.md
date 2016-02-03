@@ -1,3 +1,8 @@
+# Developer Resume
+This is my personal interactive resume, built so that it can be forked and used by others. 
+
+###
+
 No fancy generators, just clone this repo and build your app on top of it.
 
 ### Package
@@ -7,8 +12,7 @@ No fancy generators, just clone this repo and build your app on top of it.
 
 ### Setup
 
-- `$ git clone https://github.com/vhpoet/frontend-boilerplate`
-- Find and replace `frontendboilerplate` to `yourappname` in `./`
+- `$ git clone https://github.com/jhoffner/developer-resume`
 - `$ npm install`
 - `$ npm install -g bower gulp`
 - `$ gem install sass`
