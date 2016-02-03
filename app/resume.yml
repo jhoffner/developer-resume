@@ -29,13 +29,13 @@ achievements:
           - JavaScript
           - CoffeeScript
 
-articles:
-#  - category: About Development
-   - items:
-      - name: "How to make gulpfile.js watch itself"
-        href: "http://codepen.io/ScavaJripter/blog/how-to-watch-the-same-gulpfile-js-with-gulp"
-      - name: "Why Codepen is important: Refinement"
-        href: "http://codepen.io/jakealbaugh/blog/why-codepen-is-important-refinement"
+#articles:
+##  - category: About Development
+#   - items:
+#      - name: "How to make gulpfile.js watch itself"
+#        href: "http://codepen.io/ScavaJripter/blog/how-to-watch-the-same-gulpfile-js-with-gulp"
+#      - name: "Why Codepen is important: Refinement"
+#        href: "http://codepen.io/jakealbaugh/blog/why-codepen-is-important-refinement"
 
 goals:
   - category: Career
@@ -388,21 +388,21 @@ teams:
           - "UX Design"
           - "Devops"
 
-        samples:
-          -
-            name: "jBuilder Model Serializer"
-            file: "serializer.txt"
-            language: 'ruby'
-            skills:
-              - "Ruby on Rails"
-              - "Ruby"
-          -
-            name: "Filter API"
-            file: "filter-api.txt"
-            language: 'ruby'
-            skills:
-              - "Ruby on Rails"
-              - "Ruby"
+#        samples:
+#          -
+#            name: "jBuilder Model Serializer"
+#            file: "serializer.txt"
+#            language: 'ruby'
+#            skills:
+#              - "Ruby on Rails"
+#              - "Ruby"
+#          -
+#            name: "Filter API"
+#            file: "filter-api.txt"
+#            language: 'ruby'
+#            skills:
+#              - "Ruby on Rails"
+#              - "Ruby"
 
         highlights:
           -
@@ -550,11 +550,11 @@ teams:
           - "Prototype.JS"
           - "Java"
           - "JSP"
-        samples:
-          -
-            name: "Example \"Behavior\" component"
-            skills:
-              - "JavaScript"
+#        samples:
+#          -
+#            name: "Example \"Behavior\" component"
+#            skills:
+#              - "JavaScript"
 
         highlights:
           -
@@ -830,6 +830,7 @@ teams:
 
   - personal: true
     name: "Side Projects"
+    date: "May 2011 - June 2012"
     roles:
       - "Frontend Web Development"
       - "Backend Web Development"

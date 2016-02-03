@@ -115,7 +115,7 @@
         h4(ng-if="area.category") {{area.category}}
         ul
           li(ng-repeat='item in area.items')
-            a(href="{{item.href}}") {{item.name}}
+            a(href="{{item.href}}", target='_blank', ng-click="$event.stopPropagation()") {{item.name}}
 
     //resume-section(label='Critique')
     //  .area
@@ -134,12 +134,13 @@
 
     resume-section#social(label='Social')
       ul.inline-items
-          li: a Codewars
-          li: a Stack Overflow
-          li: a Quora
-          li: a Github
-          li: a Codepen
-          li: a Twitter
+          li: a(href='http://www.linkedin.com/in/jakehoffner', target='_blank', ng-click="$event.stopPropagation()") LinkedIn
+          li: a(href='https://twitter.com/JakeHoffner', target='_blank', ng-click="$event.stopPropagation()") Twitter
+          li: a(href='http://stackoverflow.com/users/572261/jake-hoffner', target='_blank', ng-click="$event.stopPropagation()") Stack Overflow
+          li: a(href='https://www.quora.com/profile/Jake-Hoffner', target='_blank', ng-click="$event.stopPropagation()") Quora
+          li: a(href='http://github.com/jhoffner', target='_blank', ng-click="$event.stopPropagation()") Github
+          li: a(href='http://www.codewars.com/users/jhoffner', target='_blank', ng-click="$event.stopPropagation()") Codewars
+          li: a(href='http://codepen.io/jhoffner/', target='_blank', ng-click="$event.stopPropagation()") Codepen
 
 
 
