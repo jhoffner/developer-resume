@@ -7,7 +7,7 @@ html {
 }
 body {
   margin-bottom: 60px;
-  font-family: 'Lato', sans-sarif;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -72,27 +72,24 @@ ul.two-columns {
 
   li {
     line-height: 24px;
-    margin-left: $big-spacing;
-    margin-right: -$big-spacing;
+    list-style-position: inside;
     float: left;
     width: 50%;
-
-    &:before {
-      content: '\25CB';
-      font-size: 13px;
-      margin-right: 8px;
-      color: black;
-      font-weight: bold;
-    }
+    padding-left: 24px; // may not match every browser without a CSS reset
   }
 }
 
 ul.inline-items {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 0 0 $big-spacing;
   li {
-    width: auto;
-    margin-right: $huge-spacing;
+    list-style: none;
+    display: inline-block;
+    margin-right: $tiny-spacing;
+    margin-bottom: $tiny-spacing;
+    padding: $tiny-spacing $small-spacing;
+    background-color: $tag-bg;
+    border-radius: $tiny-spacing;
   }
 }
 
