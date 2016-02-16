@@ -73,11 +73,10 @@ gulp.task('yaml:dist', function(){
 
 // Sass
 gulp.task('sass', function () {
-  return $.rubySass('app/styles/app.scss', { sourcemap: true })
-    .on('error', function (err) {
-      console.error('Error!', err.message);
-    })
-    .pipe($.sourcemaps.write())
+  return gulp.src('app/styles/app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('build/dev/styles'))
     .pipe($.browserSync.reload({stream:true}));
 });
