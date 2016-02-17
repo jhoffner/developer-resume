@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   jade = require('jade'),
   modRewrite = require('connect-modrewrite'),
   yaml = require('gulp-yaml'),
+  merge = require('gulp-merge-json'),
   ghPages = require('gulp-gh-pages');
 
 var $ = require('gulp-load-plugins')({
@@ -60,14 +61,16 @@ gulp.task('views:dist', function(){
 
 // Yaml
 gulp.task('yaml:dev', function(){
-  return gulp.src('app/resume.yml')
+  return gulp.src('app/data/*.yml')
     .pipe(yaml())
+    .pipe(merge('resume.json'))
     .pipe(gulp.dest('build/dev'));
 });
 
 gulp.task('yaml:dist', function(){
-  return gulp.src('app/resume.yml')
+  return gulp.src('app/data/*.yml')
     .pipe(yaml())
+    .pipe(merge('resume.json'))
     .pipe(gulp.dest('build/dist'));
 });
 
@@ -169,7 +172,7 @@ gulp.task('default', ['dev', 'serve:dev'], function(callback) {
     .pipe(gulp.dest('build/dev/views'));
 
   // Yaml
-  gulp.watch('app/resume.yml', ['yaml:dev']);
+  gulp.watch('app/data/*.yml', ['yaml:dev']);
   gulp.watch('build/dev/resume.json', ['html:dev']);
 
   // Htmls
@@ -199,7 +202,7 @@ gulp.task('deps', ['html:dist'], function () {
     // Brings back the previously filtered HTML files
     .pipe(assets.restore())
     // Parses build blocks in html to replace references to non-optimized scripts or stylesheets
-    .pipe($.useref({base: '/developer-resume'}))
+    .pipe($.useref())
     // Rewrites occurences of filenames which have been renamed by rev
     .pipe($.revReplace())
     // Minifies html
@@ -227,5 +230,5 @@ gulp.task('serveprod', function() {
 
 gulp.task('deploy', function() {
   return gulp.src('./build/dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({force: true, remoteUrl: 'https://github.com/jhoffner/jhoffner.github.io.git', branch: 'master'}));
 });

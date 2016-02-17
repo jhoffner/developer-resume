@@ -7,7 +7,7 @@ html {
 }
 body {
   margin-bottom: 60px;
-  font-family: 'Lato', sans-sarif;
+  font-family: 'Source Sans Pro', sans-sarif;
 }
 
 a {
@@ -33,9 +33,9 @@ footer {
 main {
   &.container {
     @media (min-width: $mobile-width) {
-      width: calc(100% - 270px);
+      width: calc(100% - $sidebar-width - $default-spacing);
       max-width: $page-width;
-      margin-left: 270px;
+      margin-left: $sidebar-width + $default-spacing;
     }
   }
 

@@ -1,0 +1,630 @@
+projects:
+  - name: "Codewars.com"
+    type: "Website"
+    company: 'Entrefuse'
+    url: "http://www.codewars.com"
+    summary: "Codewars.com enables developers to dramatically improve their coding skills through the use of small coding challenges called \"kata\". It has a user base of over 150k developers, who must first pass a series of simple programming tests before they can sign up."
+    skills:
+      - "Ruby on Rails"
+      - "Ruby"
+      - "JavaScript"
+      - "CoffeeScript"
+      - "HTML/CSS"
+      - "Git"
+      - "MongoDB"
+      - "Web Sockets"
+      - "jQuery"
+      - "Sass"
+      - "Memcached"
+      - "Heroku"
+    roles:
+      - "Backend Web Development"
+      - "Frontend Web Development"
+      - "Web Architecture"
+      - "Technical Leadership"
+      - "Product Management"
+      - "UX Design"
+
+    highlights:
+      - text: "I personally programmed ~90% of the site's codebase."
+      - skills:
+          - "Ruby on Rails"
+          - "Ruby"
+          - "JavaScript"
+          - "CoffeeScript"
+          - "HTML/CSS"
+          - "Sass"
+          - "MongoDB"
+          - "jQuery"
+        text: "Extended `Rails` to handle the concept known as PJAX on a more integrated and deeper level."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+          - "JavaScript"
+        roles:
+          - "Backend Web Development"
+      -
+        text: "Implemented a concept dubbed DJAX (Deferred AJAX) to allow `Rails` to handle slow-client requests by leveraging Web Sockets and Redis."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+          - "Redis"
+          - "Web Sockets"
+        roles:
+          - "Backend Web Development"
+      -
+        text: "Wrote all of the front-end codebase myself."
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Built a custom client-side templating engine complete with limited two-way bindings utilizing jQuery as the core framework."
+        skills:
+          - "CoffeeScript"
+          - "jQuery"
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Built a custom client-side application framework built on top of jQuery that uses a hybrid design leveraging PJAX."
+        skills:
+          - "CoffeeScript"
+          - "jQuery"
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Architected the entire `Rails` API and MongoDB data model for the site."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+          - "MongoDB"
+        roles:
+          - "Web Architecture"
+          - "Backend Web Development"
+      -
+        text: "Utilized advanced caching techniques by leveraging Redis and Memcached services together."
+        skills:
+          - "Redis"
+          - "Memcached"
+        roles:
+          - "Web Architecture"
+          - "Backend Web Development"
+      -
+        text: "Managed a team of contracted developers that were brought in to enhance portions of the site."
+        roles:
+          - "Technical Leadership"
+  -
+    name: "Strive.co"
+    company: 'Entrefuse'
+    url: "http://strive.co"
+    type: "Website"
+    summary: "Strive.co is recruitement based product focused on placing skilled web developers into their dream positions."
+    skills:
+      - "Ruby on Rails"
+      - "Ruby"
+      - "Node.js"
+      - "JavaScript"
+      - "AngularJS"
+      - HTML/CSS
+      - "Less"
+      - "Gulp"
+      - "Docker"
+      - AWS
+      - "Git"
+      - "MongoDB"
+      - "Redis"
+      - "Memcached"
+      - "Web Sockets"
+      - "Nginx"
+      - Bash
+      - Linux
+      - Neo4j
+    roles:
+      - "Backend Web Development"
+      - "Frontend Web Development"
+      - "Web Architecture"
+      - "Technical Leadership"
+      - "Agile Project Management"
+      - "Product Management"
+      - "UX Design"
+      - "Devops"
+
+  #        samples:
+  #          -
+  #            name: "jBuilder Model Serializer"
+  #            file: "serializer.txt"
+  #            language: 'ruby'
+  #            skills:
+  #              - "Ruby on Rails"
+  #              - "Ruby"
+  #          -
+  #            name: "Filter API"
+  #            file: "filter-api.txt"
+  #            language: 'ruby'
+  #            skills:
+  #              - "Ruby on Rails"
+  #              - "Ruby"
+
+    highlights:
+      -
+        text: "Improved jbuilder performance by bypassing the need to use the `Rails` templating system."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+        roles:
+          - "Backend Web Development"
+      -
+        text: "Built a sophisticated and flexible `Rails` API scheme that allowed for multiple front-end clients to interface with it."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+        roles:
+          - "Backend Web Development"
+      -
+        text: "Implemented a micro-service oriented architecture leveraging Docker and Nginx to link Node.js and `Rails` services together."
+        skills:
+          - "Ruby on Rails"
+          - "Docker"
+          - "Nginx"
+          - "Node.js"
+        roles:
+          - "Backend Web Development"
+      -
+        text: "Quickly learned AngularJS so that I could contribute to the codebase along with the rest of the front-end team."
+        skills:
+          - "AngularJS"
+          - "JavaScript"
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Architected the entire Rails API and MongoDB data model for the site."
+        skills:
+          - "Ruby on Rails"
+          - "Ruby"
+          - "MongoDB"
+        roles:
+          - "Backend Web Development"
+          - "Web Architecture"
+      -
+        text: "Utilized advanced caching techniques by leveraging Redis and Memcached services together."
+        skills:
+          - "Redis"
+          - "Memcached"
+        roles:
+          - "Backend Web Development"
+          - "Web Architecture"
+
+      - text: "Wrote Bash scripts to deploy Docker based architecture to AWS."
+        skills:
+          - Bash
+          - AWS
+        roles:
+          - "Devops"
+
+      - text: "Managed AWS infrastructure, including ECS & EC2."
+        skills:
+          - AWS
+          - Docker
+        roles:
+          - "Devops"
+
+      - text: "Implemented a Neo4j database to map our database as a knowledge graph, which was used for analytics, reporting and recommendations"
+        skills:
+          - Neo4j
+        roles:
+          - "Backend Web Development"
+
+      - text: "Managed a small team of full-time web developers."
+        roles:
+          - "Technical Leadership"
+
+      - text: "Planned and ran weekly agile planning meetings."
+        roles:
+          - "Technical Leadership"
+          - "Agile Project Management"
+
+      - text: "Shared product design and roadmap planning responsibilities with my co-founder."
+        roles:
+          - "Product Management"
+
+  - name: 'CodeRunner'
+    company: 'Entrefuse'
+    type: 'API'
+    summary: A code execution engine that supports safely executing code challenges within a sandbox. Used by both Strive and Codewars.
+    roles:
+      - 'Backend Web Development'
+      - "Web Architecture"
+      - 'Technical Leadership'
+      - 'Product Management'
+      - 'Agile Project Management'
+    skills:
+      - JavaScript
+      - Node.js
+      - Docker
+      - AWS
+      - Redis
+      - Bash
+      - Digital Ocean
+    highlights:
+      - text: "Designed a system that was able to handle hundreds's of concurrent dynamic code executions requests with a scalable architecture."
+        roles:
+          - Web Architecture
+        skills:
+          - Docker
+          - Node.js
+      - text: 'Able to execute code within Python, JavaScript, Ruby, Java, C#, Clojure, Haskell & CoffeeScript'
+        roles:
+          - Backend Web Development
+      - text: 'Unique feature of the engine is that it returns test case output, allowing test cases to be ran alonside of the user provided code'
+        roles:
+          - Backend Web Development
+      - text: 'Individual Docker containers were used to safely execute each API request within their own sandbox'
+        roles:
+          - Backend Web Development
+        skills:
+          - Docker
+      - text: Redis was used to enable a cluster of workers to pull from a queue
+        roles:
+          - Web Architecture
+        skills:
+          - Redis
+
+  - name: 'Stateful'
+    company: 'Entrefuse'
+    type: 'Open Source'
+    summary: An easy to use but powerful state machine for Ruby. It was custom built instead of using other
+      existing gems because none of the other solutions supported features that were needed.
+    roles:
+      - 'Backend Web Development'
+    skills:
+      - Ruby
+      - Mongoid
+      - Git
+    highlights:
+      - text: 'Unique feature of the gem is the ability to create grouped states.'
+        roles:
+          - 'Backend Web Development'
+        skills:
+          - Ruby
+          - Mongoid
+          - MongoDB
+      - text: 'Gem provides an easy DSL for managing state changes and the events related to them.'
+        roles:
+          - 'Backend Web Development'
+        skills:
+          - Ruby
+          - Mongoid
+      - text: Implementing this gem within the Codewars and Strive codebases significantly increased the ability to
+          maintain a complex and constantly evolving codebase.
+        roles:
+          - 'Backend Web Development'
+        skills:
+          - Ruby
+
+  - name: 'Mongoidal'
+    type: 'Open Source'
+    company: 'Entrefuse'
+    summary: 'Mongoid on steroids - this gem contains a large number of add-on improvements to the Mongoid library.'
+    roles:
+      - 'Backend Web Development'
+    skills:
+      - Ruby
+      - Mongoid
+      - MongoDB
+      - Git
+  - name: 'Batcan'
+    type: 'Open Source'
+    company: 'Entrefuse'
+    summary: 'Simple and expressive permissions system for Ruby on Rails projects'
+    roles:
+      - 'Backend Web Development'
+    skills:
+      - Ruby
+      - Ruby on Rails
+
+    highlights:
+      - text: Created a much more natural and logic alternative to using the CanCan gem
+        roles:
+          - Backend Web Development
+
+  -
+    name: "DirecTV.com"
+    company: DirecTV
+    url: "http://www.directv.com"
+    type: "Website"
+    summary: "I lead the JavaScript development team for the .com team"
+    roles:
+      - "Frontend Web Development"
+    skills:
+      - "JavaScript"
+      - "HTML/CSS"
+      - "Prototype.JS"
+      - "Java"
+      - "JSP"
+#        samples:
+#          -
+#            name: "Example \"Behavior\" component"
+#            skills:
+#              - "JavaScript"
+
+    highlights:
+      -
+        text: "Rebuilt the legacy codebase to use a more modern framework approach while still leveraging the underlying Prototype.JS library."
+        skills:
+          - "JavaScript"
+          - "Prototype.JS"
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Was responsible for light weight integration of the Backend Web Development ATG/Java components with the Frontend Web Development codebase."
+        skills:
+          - "Java"
+          - "JSP"
+        roles:
+          - "Backend Web Development"
+
+  - name: "DPEG"
+    company: DirecTV
+    type: "Website"
+    summary: "As a part of a team dedicated to exploring innovative forward thinking products, I created an internal tool for prototyping web apps."
+    roles:
+      - "Backend Web Development"
+      - "Frontend Web Development"
+      - "Product Management"
+      - Rapid Prototyping
+    skills:
+      - "Ruby on Rails"
+      - "Ruby"
+      - "JavaScript"
+      - "Sass"
+      - "Slim"
+    highlights:
+      - text: "Brainstormed with the team and played a role in making product decisions for future DirecTV web products"
+        roles:
+          - "Product Management"
+      - text: "Prototyped future app ideas utilizing Ruby on Rails and jQuery"
+        skills:
+          - Ruby on Rails
+          - Ruby
+          - jQuery
+          - JavaScript
+        roles:
+          - "Backend Web Development"
+          - "Frontend Web Development"
+          - Rapid Prototyping
+
+  - name: "Parsons.com"
+    company: Razorfish
+    url: "http://www.parsons.com"
+    type: Website
+    summary: "The site was built on top of MS Sharepoint, since the organization already made so much use of the product internally."
+    roles:
+      - "Frontend Web Development"
+    skills:
+      - "Sharepoint"
+      - "jQuery"
+      - "JavaScript"
+      - "HTML/CSS"
+      - "C#"
+      - "Google Maps"
+      - ASP.NET
+    highlights:
+      - text: "Used jQuery to create front-end components for a Sharepoint backed website."
+        roles:
+          - "Frontend Web Development"
+        skills:
+          - jQuery
+          - Sharepoint
+      - text: "Handled some backend C#/Sharepoint development when needed."
+        roles:
+          - "Backend Web Development"
+        skills:
+          - C#
+          - Sharepoint
+      - text: Integrated Google Maps deeply into the product, such as widgets and dynamic content
+        roles:
+          - Frontend Web Development
+        skills:
+          - Google Maps
+
+
+  - name: 'JSON API'
+    company: Boom Music
+    type: API
+    summary: "I was a core contributor to the company's application API, which was used both by our website and by our SDKs"
+    roles:
+      - "Backend Web Development"
+    skills:
+      - "C#"
+      - "ASP.NET"
+      - WCF
+    highlights:
+      - text: "Refactored and Simplified C# business objects to allow for increased productivity"
+        roles:
+          - "Backend Web Development"
+        skills:
+          - "C#"
+          - WCF
+          - "ASP.NET"
+
+  - name: "Internal CMS"
+    company: Boom Music
+    summary: "An internal tool which was used to ingest huge amounts of song data into our system, as well as used by the content team to manage playlists."
+    type: Website
+    roles:
+      - 'Frontend Web Development'
+      - 'Backend Web Development'
+      - "UX Design"
+    skills:
+      - "C#"
+      - "ASP.NET"
+      - WCF
+      - "JavaScript"
+      - "Ext JS"
+      - "HTML/CSS"
+    highlights:
+      - text: "Rapidly built CMS front-end utilizing Ext JS"
+        roles:
+          - Backend Web Development
+        skills:
+          - "Ext JS"
+          - "JavaScript"
+          - "HTML/CSS"
+      - text: "Designed a highly praised user experience for working with internal data"
+        roles:
+          - UX Design
+      - text: "Developed an queue/digestion system for processing batches of over 100K+ MP3 files"
+        roles:
+          - Backend Web Development
+        skills:
+          - C#
+          - MS SQL Server
+          - WCF
+      - text: "Digestion system was able to scrub and reconcile data across multiple data sources"
+        roles:
+          - Backend Web Development
+        skills:
+          - C#
+          - MS SQL Server
+          - WCF
+
+
+  - name: 'Microsoft CRM'
+    company: 'Invoke Systems/Smith'
+    type: 'Integration, Multiple Clients'
+    summary: The last 3 years of my time with the company we had shifted our focus onto being a
+      preferred MS CRM vendor. During this time I worked with a variety of clients including Seattle 411
+      and USDA. We became very good at bending the capabilities of the application to do things well beyond being a CRM.
+    roles:
+      - Frontend Web Development
+      - Backend Web Development
+      - UX Design
+      - Rapid Prototyping
+      - Technical Leadership
+    skills:
+      - C#
+      - JavaScript
+      - HTML/CSS
+      - AJAX
+      - MS SQL Server
+      - MS CRM
+      - MS Virtual Earth
+    highlights:
+      - text: Created an internal SDK that allowed our team to rapidly build-out advanced applications on top of the MS CRM platform
+        roles:
+          - Frontend Web Development
+          - Backend Web Development
+          - UX Design
+          - Rapid Prototyping
+          - Data Design
+
+        skills:
+          - MS CRM
+          - C#
+          - JavaScript
+          - MS Virtual Earth
+      - text: Worked with propsect clients to rapidly design and prototype custom CRM implementations that
+          would work with their specific data model and needs.
+        roles:
+          - Frontend Web Development
+          - Backend Web Develpoment
+          - UX Design
+          - Rapid Prototyping
+          - Data Design
+
+      - text: Extended MS CRM well beyond its original use-case. Some use-cases include a 411 help desk, a casino "whale"
+          tracker, real-time customer support and government management.
+        roles:
+          - Rapid Prototyping
+          - UX Design
+          - Data Design
+
+  - name: "Air Force Board of Corrections"
+    company: 'Invoke Systems/Smith'
+    type: Windows Application
+    summary: I spent a year working on a custom windows app for the Air Force, which was used for document management by
+      all of their departments. My primary responsibility was to implement the GUI for the app.
+    roles:
+      - "Windows Development"
+      - "UX Design"
+    skills:
+      - C#
+
+  - name: Custom Web Development
+    company: 'Invoke Systems/Smith'
+    type: Website, Multiple Clients
+    summary: My initial 4 years at the company was spent mostly building custom web applications for
+      various clients such as the Maryland Department of Education and Maryland Department of Health and Hygiene.
+    roles:
+      - Frontend Web Development
+      - Backend Web Development
+      - Web Design
+      - UX Design
+      - Technical Leadership
+    skills:
+      - C#
+      - ASP.NET
+      - MS SQL Server
+      - VB Script
+      - JavaScript
+      - HTML/CSS
+      - Flash
+      - XML
+      - ASP
+      - SVN
+
+    highlights:
+      - text: "On many projects I lead a small development team. I was responsible for reviewing code and delegating tasks."
+        roles:
+          - Technical Leadership
+
+      - text: "Developed custom CMS and CRM applications for various clients using .NET technologies"
+        roles:
+          - Backend Web Developer
+          - Frontend Web Developer
+      - text: "Was the primary person at the company responsible for UX and UI design"
+        roles:
+          - Web Design
+          - UX Design
+
+  -
+    name: "Reqeo"
+    type: "Website"
+    startDate: 'Jan 2012'
+    endDate: 'Oct 2012'
+    summary: A startup idea based on recommendations for users based off of mutual followers
+      and interests. I spent over a year working on the concept in my off-time. In the end, I created
+      the product in too much of a vacuum. It was a hard lesson learned in the importance of keeping a product
+      simple and getting it in front of actual users as soon as possible. It was also probably my masterpiece
+      in terms of clean and maintanable C# code - another reason why the project failed as the time should have
+      been spent elsewhere.
+    roles:
+      - "Frontend Web Development"
+      - "Backend Web Development"
+      - "UX Design"
+      - "Web Design"
+    skills:
+      - "JavaScript"
+      - "HTML/CSS"
+      - "jQuery"
+      - "C#"
+      - "ASP.NET MVC"
+      - "Lucene"
+      - "MS SQL Server"
+      - "MongoDB"
+      - Git
+      - Message Bus
+    highlights:
+      -
+        text: "Built a custom client-side framework on top of jQuery to ease and DRY up development efforts. This framework was part of a similar design that I had been evolving over the passed 3 years."
+        skills:
+          - "JavaScript"
+          - "jQuery"
+        roles:
+          - "Frontend Web Development"
+      -
+        text: "Utilizing a non-standard open source ORM, I created a repository based data model that leveraged both SQL Server and MongoDB with a CQRS influenced architectual pattern."
+        skills:
+          - "C#"
+          - "MongoDB"
+          - "MS SQL Server"
+        roles:
+          - "Backend Web Development"

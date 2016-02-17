@@ -1,0 +1,122 @@
+skills:
+  - name: JavaScript
+    years: 15
+    category: primary
+
+  - name: Ruby
+    years: 3
+    category: primary
+
+  - name: Ruby on Rails
+    years: 3
+    category: primary
+
+  - name: AngularJS
+    years: 1
+    category: primary
+
+  - name: HTML/CSS
+    years: 15
+    category: primary
+
+  - name: Node.js
+    years: 3
+    category: primary
+
+  - name: AWS
+    years: 1
+    category: primary
+
+  - name: Docker
+    years: 1
+    category: primary
+
+  - name: MongoDB
+    years: 5
+    category: primary
+
+  - name: MS SQL Server
+    years: 10
+    category: primary
+
+  - name: C#
+    years: 9
+    category: primary
+
+  - name: SQL
+    years: 10
+    category: primary
+
+  - name: ASP.NET MVC
+    years: 3
+    category: primary
+
+  - name: ASP.NET
+    years: 8
+    category: primary
+
+  - name: Redis
+    category: secondary
+
+  - name: Memcached
+    category: secondary
+
+  - name: Neo4j
+    category: secondary
+
+  - name: CoffeeScript
+    category: secondary
+
+  - name: Sass
+    category: secondary
+
+  - name: Less
+    category: secondary
+
+  - name: Sketch
+    category: secondary
+
+  - name: Git
+    category: secondary
+
+  - name: Gulp
+    category: secondary
+
+  - name: Digital Ocean
+    category: secondary
+
+  - name: Heroku
+    category: secondary
+
+  - name: Elastic Search
+    category: secondary
+
+  - name: jQuery
+    category: secondary
+
+  - name: Nginx
+    category: secondary
+
+  - name: Web Sockets
+    category: secondary
+
+  - name: WCF
+    category: secondary
+
+  - name: XML
+    category: legacy
+
+  - name: XSLT
+    category: legacy
+
+  - name: SVN
+    category: legacy
+
+  - name: Flash
+    category: legacy
+
+  - name: ASP.NET
+    category: legacy
+
+  - name: ASP
+    category: legacy

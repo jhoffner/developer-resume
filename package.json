@@ -44,7 +44,8 @@
     "protractor": "^1.5.0",
     "wiredep": "^2.2.2",
     "gulp-yaml": "~0.2.4",
-    "gulp-gh-pages": "~0.5.2"
+    "gulp-gh-pages": "~0.5.2",
+    "gulp-merge-json": "~0.3.0"
   },
   "dependencies": {
     "gulp": "~3.8.10",

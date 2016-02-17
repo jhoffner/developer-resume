@@ -7,7 +7,8 @@ angular
   .directive('highlight', highlight)
   .directive('clearFilters', clearFilters)
   .directive('tagsList', tagsList)
-  .directive('team', team)
+  .directive('company', company)
+  .directive('project', project)
   .directive('tagsUsed', tagsUsed)
   .directive('scroll', scroll);
 
@@ -20,64 +21,25 @@ function resumeSection () {
   };
 }
 
-function team ($http) {
-  function projectHasSkill(project, skill) {
-    return project.roles.some(function(role) {
-      return role.skills.indexOf(skill) > -1;
-    });
-  }
-
+function company ($http) {
   return {
     restrict: 'E',
-    scope: { team: '=', view: '=' },
-    templateUrl: 'views/directives/team.html',
+    scope: { company: '=', view: '=', projects: '=' },
+    templateUrl: 'views/directives/company.html',
     link: function(scope) {
-
-      scope.shouldShowGroup = function(project, group) {
-        var roleKey = scope.$parent.role;
-        if (roleKey) {
-          return project[group].some(function(hl) {
-            return (hl.roles || []).indexOf(roleKey) >= 0;
-          });
-        }
-
-        var skillKey = scope.$parent.skill;
-        if (skillKey) {
-          return project[group].some(function(hl) {
-            return (hl.skills || []).indexOf(skillKey) >= 0;
-          });
-        }
-
-        return true;
-      }
-
-      scope.shouldShowItem = function(item) {
-        var roleKey = scope.$parent.role;
-        if (roleKey) {
-          if ((item.roles || []).indexOf(roleKey) == -1) return false;
-        }
-
-        var skillKey = scope.$parent.skill;
-        if (skillKey) {
-          if ((item.skills || []).indexOf(skillKey) == -1) return false;
-        }
-
-        return true;
-      }
-
-      scope.shouldShowTeam = function() {
-        var roleKey = scope.$parent.role;
+      scope.shouldShowCompany = function() {
+        var roleKey = scope.$root.filter.role;
 
         if (roleKey) {
-          var existing = (scope.team.projects || []).some(function(project) {
+          var existing = (scope.company.projects || []).some(function(project) {
             return project.roles.indexOf(roleKey) >= 0;
           });
-          if (!existing) false;
+          if (!existing) return false;
         }
 
-        var skillKey = scope.$parent.skill;
+        var skillKey = scope.$root.filter.skill;
         if (skillKey) {
-          var existing = (scope.team.projects || []).some(function(project) {
+          var existing = (scope.company.projects || []).some(function(project) {
             return project.skills.indexOf(skillKey) >= 0;
           });
 
@@ -86,9 +48,53 @@ function team ($http) {
 
         return true;
       }
+    }
+  };
+}
 
-      scope.filterName = function() {
-        return scope.$root.role || scope.$root.skill;
+function project ($http) {
+  function projectHasSkill(project, skill) {
+    return project.roles.some(function(role) {
+      return role.skills.indexOf(skill) > -1;
+    });
+  }
+
+  return {
+    restrict: 'E',
+    scope: { view: '=', project: '=' },
+    templateUrl: 'views/directives/project.html',
+    link: function(scope) {
+
+      scope.shouldShowGroup = function(group) {
+        var roleKey = scope.$root.filter.role
+        if (roleKey) {
+          return scope.project[group].some(function(hl) {
+            return (hl.roles || []).indexOf(roleKey) >= 0;
+          });
+        }
+
+        var skillKey = scope.$root.filter.skill;
+        if (skillKey) {
+          return scope.project[group].some(function(hl) {
+            return (hl.skills || []).indexOf(skillKey) >= 0;
+          });
+        }
+
+        return true;
+      }
+
+      scope.shouldShowItem = function(item) {
+        var roleKey = scope.$root.filter.role;
+        if (roleKey) {
+          if ((item.roles || []).indexOf(roleKey) == -1) return false;
+        }
+
+        var skillKey = scope.$root.filter.skill;
+        if (skillKey) {
+          if ((item.skills || []).indexOf(skillKey) == -1) return false;
+        }
+
+        return true;
       }
 
       scope.setSample = function(sample) {
@@ -107,7 +113,6 @@ function team ($http) {
             scope.activeSample = sample.code ? sample : null;
           }
         }
-
       }
     }
   };
@@ -147,8 +152,8 @@ function clearFilters () {
     template: '<a class="clear-filters" ng-click="clear()">Remove Filter</a>',
     link: function(scope) {
       scope.clear = function() {
-        scope.$root.skill = null;
-        scope.$root.role = null;
+        scope.$root.filter.role = null;
+        scope.$root.filter.skill = null;
       }
     }
   };
@@ -187,7 +192,7 @@ function filterTag ($document) {
     templateUrl: 'views/directives/filter-tag.html',
     link: function(scope, el) {
       scope.cssClass = function() {
-        return scope.$root[scope.type] === scope.label ? 'active' : '';
+        return scope.$root.filter[scope.type] === scope.label ? 'active' : '';
       }
 
       scope.filter = function() {

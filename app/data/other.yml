@@ -1,0 +1,97 @@
+
+achievements:
+  - category: Awards
+    items:
+      - text: "2x Startup Weekend Winner"
+
+  - items:
+      - text: "I co-founded Codewars.com, writing ~95% of the codebase myself."
+        roles:
+          - Product Management
+          - Project Management
+          - UX Design
+          - Backend Web Development
+          - Fontend Web Development
+        skills:
+          - Ruby
+          - Ruby on Rails
+          - JavaScript
+          - CoffeeScript
+
+#articles:
+##  - category: About Development
+#   - items:
+#      - name: "How to make gulpfile.js watch itself"
+#        href: "http://codepen.io/ScavaJripter/blog/how-to-watch-the-same-gulpfile-js-with-gulp"
+#      - name: "Why Codepen is important: Refinement"
+#        href: "http://codepen.io/jakealbaugh/blog/why-codepen-is-important-refinement"
+
+goals:
+  - category: Career
+    items:
+      - Continue to grow as a technical leader
+      - Be exposed to new challenges that push my limits
+      - Build innovative products that make an impact
+      - Ability to be a core contributor to product decisions
+
+  - category: Work Environment
+    items:
+      - Non-corporate/innovative culture
+      - Passionate team
+      - Modern stack
+      - Talented and driven colleagues
+      - Autonomy
+
+interests:
+  - category: Roles & Technologies I prefer to work with
+    id: interests-preferred
+    items:
+      - Technical Leadership
+      - Product Development
+      - Fullstack Web Development
+      - Ruby
+      - Ruby on Rails
+      - Node.js
+      - Docker
+      - UX Design
+
+  - category: Roles & Technologies I want to avoid at all costs
+    id: interests-avoid
+    items:
+      - Devops
+      - Php
+      - Java
+
+  - category: Roles & Technologies I want to learn or improve at
+    id: interests-improve
+    items:
+      - Growth Hacking
+      - Mobile Development
+      - Flux/React
+      - Go
+      - Elixir
+
+  - category: Challenges that interest me the most
+    id: interests-challenges
+    items:
+      - Framework & Library Development
+      - Knowledge Graphs
+      - Recommendation/Matching Systems
+      - Communication/Messaging Systems
+      - Micro-service Oriented Architecture
+      - Automation
+
+  - category: My Personal Interests & Hobbies
+    id: interests-personal
+    items:
+      - Food
+      - Health
+      - Music
+      - Bass Guitar
+      - Snowboarding
+      - Traveling
+      - Vagabonding
+      - Video Games
+      - Programming
+      - Movies
+

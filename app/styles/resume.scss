@@ -5,7 +5,7 @@ $section-label-width: 150px;
     position: fixed;
     left: 0;
     top: 0;
-    width: 270px;
+    width: $sidebar-width;
     height: 100%;
     overflow: auto;
     background-color: $sidebar-bgcolor;
@@ -20,7 +20,14 @@ $section-label-width: 150px;
         background-color: $sidebar-alt-bgcolor;
       }
     }
+    h2,h3 {
+      text-align: left;
+      margin-bottom: 0;
+    }
+
     h3 {
+      font-weight: bold;
+      font-size: 16px;
       text-align: left;
     }
 
@@ -38,6 +45,13 @@ $section-label-width: 150px;
 
     .content {
       margin-left: -$big-spacing;
+    }
+
+    .resume-label, .resume-location {
+      text-transform: uppercase;
+      color: lighten($text-color, 10%);
+      margin-left: $big-spacing;
+      letter-spacing: 0.5px;
     }
 
     .links {
@@ -81,12 +95,12 @@ $section-label-width: 150px;
   }
 
   h3 {
+    font-size: 18px;
     text-transform: uppercase;
-    font-size: 20px;
     letter-spacing: 0.7px;
+    text-align: right;
     @media (min-width: $mobile-width) {
       margin-top: 0;
-      text-align: right;
       margin-right: $big-spacing;
     }
   }
@@ -94,7 +108,7 @@ $section-label-width: 150px;
   h4 {
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: lighten($text-color, 10%);
     margin-left: $big-spacing;
     letter-spacing: 0.5px;
@@ -105,6 +119,10 @@ $section-label-width: 150px;
       margin-left: 0;
       padding-left: $huge-spacing;
     }
+  }
+
+  .content .area:first-child h4 {
+    margin-top: $tiny-spacing;
   }
 
   .notice {
@@ -139,14 +157,14 @@ $section-label-width: 150px;
 
     .content {
       @media (min-width: $mobile-width) {
-        border-left: 2px solid darken(white, 10%);
+        border-left: 1px solid $sidebar-bgcolor;
         margin-left: $section-label-width;
       }
 
       ul {
         list-style-type: circle;
         li {
-          font-size: 14.5px;
+          font-size: 14px;
         }
       }
     }
@@ -155,28 +173,42 @@ $section-label-width: 150px;
     clear: both;
   }
 
-  .team {
+  .company {
     margin-left: $big-spacing;
     margin-bottom: $mega-spacing;
 
     h5 {
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 22px;
       color: black;
       padding: $tiny-spacing 0;
 
-      span.date {
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        color: $lighter-text-color;
+      }
+      time {
         float: right;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: $tiny-spacing;
+        color: $lighter-text-color;
       }
     }
 
     h4 {
       margin-left: 0;
+
+      time {
+        float: right;
+      }
     }
 
     h6 {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 12px;
+      text-transform: uppercase;
       margin-top: $default-spacing;
       letter-spacing: 0.5px;
     }
@@ -190,7 +222,7 @@ $section-label-width: 150px;
     }
 
     .project {
-      border-left: $big-spacing solid darken(white, 5%);
+      border-left: $default-spacing solid $sidebar-bgcolor;
       margin-left: -$big-spacing;
       padding-left: $default-spacing;
       margin-bottom: $huge-spacing;

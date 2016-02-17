@@ -1,0 +1,10 @@
+markets:
+  - name: 'Customer Relationship Management'
+  - name: 'Crowdsourced Content'
+  - name: 'Social Communities'
+  - name: 'Content Management Systems'
+  - name: 'Document Management Systems'
+  - name: 'Recruiting'
+  - name: 'Consumer Web'
+  - name: 'B2B'
+  - name: 'Marketplaces'

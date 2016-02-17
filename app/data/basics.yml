@@ -1,0 +1,44 @@
+basics:
+  name: Jake Hoffner
+  label: Fullstack Web Architect
+  website: 'jhoffner.github.io'
+  location:
+    city: Los Angeles
+    region: California
+  highlights:
+    - 15 Years of professional software development experience
+    - Co-founded a VC funded startup in 2012
+    - Self-taught at the age of 19
+    - First professional job was at the age of 20
+    - Started as a designer & front-end developer
+    - Has worked on Federal, State, Military, B2B and Consumer applications
+    - 2x Startup Weekend Winner
+
+  profiles:
+    - network: 'LinkedIn'
+      username: 'jakehoffner'
+      url: 'http://www.linkedin.com/in/jakehoffner'
+
+    - network: 'Twitter'
+      username: 'jakehoffner'
+      url: 'https://twitter.com/JakeHoffner'
+
+    - network: 'Stack Overflow'
+      username: 'jake-hoffner'
+      url: 'http://stackoverflow.com/users/572261/jake-hoffner'
+
+    - network: 'GitHub'
+      username: 'jhoffner'
+      url: 'http://github.com/jhoffner'
+
+    - network: 'Quora'
+      username: 'Jake-Hoffner'
+      url: 'https://www.quora.com/profile/Jake-Hoffner'
+
+    - network: 'Codewars'
+      username: 'jhoffner'
+      url: 'http://www.codewars.com/users/jhoffner'
+
+    - network: 'Codepen'
+      username: 'jhoffner'
+      url: 'http://codepen.io/jhoffner'

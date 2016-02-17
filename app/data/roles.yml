@@ -1,0 +1,35 @@
+roles:
+  - name: Frontend Web Development
+    years: 15
+    category: primary
+
+  - name: Backend Web Development
+    years: 13
+    category: primary
+
+  - name: Web Architecture
+    years: 7
+    category: primary
+
+  - name: Technical Leadership
+    years: 7
+    category: primary
+
+  - name: Rapid Prototyping
+    years: 3
+    category: primary
+
+  - name: Agile Project Management
+    category: secondary
+
+  - name: Product Management
+    category: secondary
+
+  - name: Devops
+    category: secondary
+
+  - name: UX Design
+    category: secondary
+
+  - name: Web Design
+    category: secondary

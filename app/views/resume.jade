@@ -3,23 +3,24 @@
 
   .sidebar.bottom
     .area(scroll)
-      h3 {{resume.name}}
+      h2 {{resume.basics.name}}
       .content
-        h4 {{resume.careerTitle}}
-        h4 {{resume.location}}
+        .resume-label(ng-if='resume.basics.label') {{resume.basics.label}}
+        .resume-location(ng-if='resume.basics.location') {{resume.basics.location.city}}, {{resume.basics.location.region}}
 
     .area.links
       h3 About Me
       .content
         ul
-          li: a(ng-click="goto('summary')") Summary
-          li: a(ng-click="goto('roles')") Roles
-          li: a(ng-click="goto('skills')") Skills
-          li: a(ng-click="goto('experience')") Experience
-          li: a(ng-click="goto('interests')") Interests
-          li: a(ng-click="goto('goals')") Goals
-          li: a(ng-click="goto('articles')") Articles
-          li: a(ng-click="goto('social')") Social
+          li(ng-if='resume.basics.highlights'): a(ng-click="goto('highlights')") Highlights
+          li(ng-if='resume.roles'): a(ng-click="goto('roles')") Roles
+          li(ng-if='resume.skills'): a(ng-click="goto('skills')") Skills
+          li(ng-if='resume.markets'): a(ng-click="goto('markets')") Markets
+          li(ng-if='resume.work || resume.projects'): a(ng-click="goto('experience')") Experience
+          li(ng-if='resume.interests'): a(ng-click="goto('interests')") Interests
+          li(ng-if='resume.goals'): a(ng-click="goto('goals')") Goals
+          li(ng-if='resume.articles'): a(ng-click="goto('articles')") Articles
+          li(ng-if='resume.basics.profiles'): a(ng-click="goto('social')") Social
 
     .area.links
       h3 View
@@ -28,22 +29,22 @@
           li(ng-class="{active: view === 'detailed'}"): a(ng-click="view = 'detailed'") Detailed
           li(ng-class="{active: view === 'simple'}"): a(ng-click="view = 'simple'") Simple
 
-    .area(ng-class="{alt: activeFilter()}")
+    .area(ng-class="{alt: hasActiveFilter()}")
       h3 Filter
-      div(ng-hide="activeFilter()")
+      div(ng-hide="hasActiveFilter()")
         | Click a role or skill to filter content.
-      div(ng-show="activeFilter()")
-        div(ng-if='role')
+      div(ng-show="hasActiveFilter()")
+        div(ng-if='filter.role')
           span
             b Role:
-            a(ng-click='filter("role", role)') remove
-          div {{tagLabel(role)}}
+            a(ng-click='filter("role", filter.role)') remove
+          div {{tagLabel(filter.role)}}
 
-        div(ng-if='skill')
+        div(ng-if='filter.skill')
           span
             b Skill:
-            a(ng-click='filter("skill", skill)') remove
-          div {{tagLabel(skill)}}
+            a(ng-click='filter("skill", filter.skill)') remove
+          div {{tagLabel(filter.skill)}}
 
         .content(ng-if="filteredProjects")
           h4 Related Experience:
@@ -61,15 +62,15 @@
     //  p You can leave notes here and they will persist between sessions.
 
   .page-header
-    h1 Resume
+    h1 About Me
   .page-title
-    h1 {{resume.name}}
-    h2(ng-if='resume.careerTitle') {{resume.careerTitle}}
+    h1 {{resume.basics.name}}
+    h2(ng-if='resume.basics.label') {{resume.bascis.label}}
 
   article
-    resume-section#summary(label='Summary')
+    resume-section#highlights(label='Highlights')
       ul
-        li(ng-repeat='item in resume.summary') {{item}}
+        li(ng-repeat='item in resume.basics.highlights') {{item}}
 
     resume-section#roles(label='Roles')
       .area
@@ -93,10 +94,12 @@
 
     resume-section#experience(label='Experience')
       h4.header @Work
-      team(ng-repeat='team in resume.teams | filter:{personal: false}', team='team', view='view')
+      company(ng-repeat='company in resume.work', company='company', view='view')
 
-      h4.header @Home
-      team(ng-repeat='team in resume.teams | filter:{personal: true}', team='team', view='view')
+      div(ng-if='resume.sideProjects.length')
+        h4.header @Home
+        .company
+          project(ng-repeat='project in resume.sideProjects', project='project', view='view')
 
     resume-section#interests(label='Interests', ng-if='resume.interests')
       .area(ng-repeat='area in resume.interests')
@@ -132,15 +135,10 @@
     //        li Strong life/work balance
     //        li Highly Focused
 
-    resume-section#social(label='Social')
+    resume-section#social(label='Social', ng-if='resume.basics.profiles.length')
       ul.inline-items
-          li: a(href='http://www.linkedin.com/in/jakehoffner', target='_blank', ng-click="$event.stopPropagation()") LinkedIn
-          li: a(href='https://twitter.com/JakeHoffner', target='_blank', ng-click="$event.stopPropagation()") Twitter
-          li: a(href='http://stackoverflow.com/users/572261/jake-hoffner', target='_blank', ng-click="$event.stopPropagation()") Stack Overflow
-          li: a(href='https://www.quora.com/profile/Jake-Hoffner', target='_blank', ng-click="$event.stopPropagation()") Quora
-          li: a(href='http://github.com/jhoffner', target='_blank', ng-click="$event.stopPropagation()") Github
-          li: a(href='http://www.codewars.com/users/jhoffner', target='_blank', ng-click="$event.stopPropagation()") Codewars
-          li: a(href='http://codepen.io/jhoffner/', target='_blank', ng-click="$event.stopPropagation()") Codepen
+        li(ng-repeat='profile in resume.basics.profiles')
+          a(ng-href='profile.url', target='_blank', ng-click="$event.stopPropagation()") {{profile.network}}
 
 
 
