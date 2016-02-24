@@ -15,14 +15,18 @@ roles:
     years: 7
     category: primary
 
+  - name: Agile Project Management
+    years: 5
+    category: primary
+
   - name: Rapid Prototyping
     years: 3
     category: primary
 
-  - name: Agile Project Management
+  - name: Product Management
     category: secondary
 
-  - name: Product Management
+  - name: Growth Hacking
     category: secondary
 
   - name: Devops

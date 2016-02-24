@@ -10,7 +10,8 @@ angular
   .directive('company', company)
   .directive('project', project)
   .directive('tagsUsed', tagsUsed)
-  .directive('scroll', scroll);
+  .directive('scroll', scroll)
+  .directive('external', externalLink)
 
 function resumeSection () {
   return {
@@ -18,6 +19,19 @@ function resumeSection () {
     transclude: true,
     scope: { label: '@' },
     templateUrl: 'views/directives/resume-section.html'
+  };
+}
+
+// prevents the router from swallowing anchor clicks and opens link within a new window.
+function externalLink () {
+  return {
+    restrict: 'A',
+    link: function(scope, el, attrs) {
+      el.bind('click', function(e){ e.stopPropagation() });
+      if (!attrs.target) {
+        el.attr('target', '_blank')
+      }
+    }
   };
 }
 

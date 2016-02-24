@@ -115,8 +115,8 @@ skills:
   - name: Flash
     category: legacy
 
-  - name: ASP.NET
+  - name: ASP
     category: legacy
 
-  - name: ASP
+  - name: VBScript
     category: legacy

@@ -1,10 +1,33 @@
 markets:
-  - name: 'Customer Relationship Management'
-  - name: 'Crowdsourced Content'
-  - name: 'Social Communities'
-  - name: 'Content Management Systems'
-  - name: 'Document Management Systems'
-  - name: 'Recruiting'
   - name: 'Consumer Web'
+    years: 8
+
   - name: 'B2B'
+    years: 8
+
+  - name: 'Customer Relationship Management'
+    years: 6
+
+  - name: 'Open Source'
+    years: 4
+
+  - name: 'Crowdsourced Content'
+    years: 4
+
+  - name: 'Social Communities'
+    years: 4
+
+  - name: 'Television'
+    years: 4
+
+  - name: 'Document Management Systems'
+    years: 4
+
+  - name: 'Content Management Systems'
+    years: 2
+
+  - name: 'Recruiting'
+    years: 1
+
   - name: 'Marketplaces'
+    years: 1

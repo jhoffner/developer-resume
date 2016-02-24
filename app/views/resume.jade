@@ -118,7 +118,7 @@
         h4(ng-if="area.category") {{area.category}}
         ul
           li(ng-repeat='item in area.items')
-            a(href="{{item.href}}", target='_blank', ng-click="$event.stopPropagation()") {{item.name}}
+            a(href="{{item.href}}", external) {{item.name}}
 
     //resume-section(label='Critique')
     //  .area
@@ -138,7 +138,7 @@
     resume-section#social(label='Social', ng-if='resume.basics.profiles.length')
       ul.inline-items
         li(ng-repeat='profile in resume.basics.profiles')
-          a(ng-href='profile.url', target='_blank', ng-click="$event.stopPropagation()") {{profile.network}}
+          a(ng-href='profile.url', external) {{profile.network}}
 
 
 

@@ -59,8 +59,7 @@ $section-label-width: 150px;
       li {
         display: block;
         width: 50%;
-        padding: .5rem 2rem;
-        padding-right: 1rem;
+        padding: .5rem 1rem .5rem 2rem;
         line-height: 2rem;
         text-transform: uppercase;
         float: left;
@@ -98,8 +97,9 @@ $section-label-width: 150px;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.7px;
-    text-align: right;
+    text-align: center;
     @media (min-width: $mobile-width) {
+      text-align: right;
       margin-top: 0;
       margin-right: $big-spacing;
     }
@@ -117,7 +117,7 @@ $section-label-width: 150px;
       background-color: darken(white, 5%);
       padding: $default-spacing;
       margin-left: 0;
-      padding-left: $huge-spacing;
+      padding: $default-spacing $default-spacing $default-spacing $huge-spacing;
     }
   }
 
@@ -229,7 +229,7 @@ $section-label-width: 150px;
       > h4 {
 //        margin-left: $big-spacing;
         margin-top: $big-spacing;
-        span {
+        span.type {
           display: block;
           font-size: 1.1rem;
         }
@@ -242,7 +242,7 @@ $section-label-width: 150px;
 
       span.tag, span.trail-tag{
         padding: 1px 2px;
-        background-color: darken(white, 12%);
+        background-color: $tag-bg;
         border-radius: 3px;
         font-size: 12px;
         font-weight: normal;

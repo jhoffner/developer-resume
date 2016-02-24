@@ -29,10 +29,10 @@ achievements:
 goals:
   - category: Career
     items:
-      - Continue to grow as a technical leader
-      - Be exposed to new challenges that push my limits
       - Build innovative products that make an impact
       - Ability to be a core contributor to product decisions
+      - Be exposed to new challenges that push my limits
+      - Continue to mature as a skilled technical leader
 
   - category: Work Environment
     items:
@@ -54,6 +54,7 @@ interests:
       - Node.js
       - Docker
       - UX Design
+      - Growth Hacking
 
   - category: Roles & Technologies I want to avoid at all costs
     id: interests-avoid

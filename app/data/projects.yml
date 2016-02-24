@@ -22,8 +22,10 @@ projects:
       - "Frontend Web Development"
       - "Web Architecture"
       - "Technical Leadership"
+      - "Agile Project Management"
       - "Product Management"
       - "UX Design"
+      - "Growth Hacking"
 
     highlights:
       - text: "I personally programmed ~90% of the site's codebase."
@@ -52,10 +54,6 @@ projects:
           - "Web Sockets"
         roles:
           - "Backend Web Development"
-      -
-        text: "Wrote all of the front-end codebase myself."
-        roles:
-          - "Frontend Web Development"
       -
         text: "Built a custom client-side templating engine complete with limited two-way bindings utilizing jQuery as the core framework."
         skills:
@@ -126,6 +124,7 @@ projects:
       - "Product Management"
       - "UX Design"
       - "Devops"
+      - "Growth Hacking"
 
   #        samples:
   #          -
@@ -206,7 +205,7 @@ projects:
         roles:
           - "Devops"
 
-      - text: "Implemented a Neo4j database to map our database as a knowledge graph, which was used for analytics, reporting and recommendations"
+      - text: "Implemented a Neo4j database to map our database as a knowledge graph, which was used for analytics, reporting and predictive matching."
         skills:
           - Neo4j
         roles:
@@ -224,6 +223,11 @@ projects:
       - text: "Shared product design and roadmap planning responsibilities with my co-founder."
         roles:
           - "Product Management"
+
+      - text: "Managed the growth hacking experiments for the team and implement various experiments of my own. This includes writing blog entries,
+          Twitter integrations, A/B testing of email & in-app marketing campaigns, etc."
+        roles:
+          - Growth Hacking
 
   - name: 'CodeRunner'
     company: 'Entrefuse'
@@ -250,26 +254,69 @@ projects:
         skills:
           - Docker
           - Node.js
-      - text: 'Able to execute code within Python, JavaScript, Ruby, Java, C#, Clojure, Haskell & CoffeeScript'
+      - text: 'Able to execute code within Python, JavaScript, Ruby, Java, C#, Clojure, Haskell & CoffeeScript.'
         roles:
           - Backend Web Development
-      - text: 'Unique feature of the engine is that it returns test case output, allowing test cases to be ran alonside of the user provided code'
+      - text: 'Unique feature of the engine is that it returns test case output, allowing test cases to be ran alonside of the user provided code.'
         roles:
           - Backend Web Development
-      - text: 'Individual Docker containers were used to safely execute each API request within their own sandbox'
+      - text: 'Individual Docker containers were used to safely execute each API request within their own sandbox.'
         roles:
           - Backend Web Development
         skills:
           - Docker
-      - text: Redis was used to enable a cluster of workers to pull from a queue
+      - text: Redis was used to enable a cluster of workers to pull from a queue.
         roles:
           - Web Architecture
         skills:
           - Redis
 
+  - name: 'Developer Resume'
+    company: 'Entrefuse'
+    type: 'Open Source / Prototype'
+    url: 'https://github.com/jhoffner/developer-resume'
+    summary: The site that you are viewing now (if being viewed by web) was originally developed during an internal
+      hackathon that I arranged for me and my development team. Each of us were giving 2 days to come up with our own
+      project that was meant to innovate within the realm of our product.
+    roles:
+      - Frontend Web Development
+      - Rapid Prototyping
+      - UX Design
+      - Web Design
+      - Growth Hacking
+    skills:
+      - AngularJS
+      - JavaScript
+      - HTML
+      - CSS
+      - Sass
+      - YAML
+      - JSON
+      - Gulp
+    highlights:
+      - text: Quickly developed within 2 days, I was able to illustrate to the team how we could implement an interactive
+          resume that would allow employeers to drill down into the details that they care about most.
+        roles:
+          - Rapid Prototyping
+          - UX Design
+      - text: The site is an AngularJS app with no backend. It parses a YAML file into a JSON file during deployment via Gulp.
+        roles:
+          - Frontend Web Development
+        skills:
+          - AngularJS
+          - YAML
+          - JSON
+          - Gulp
+      - text: The site was developed under the concept that it would be easily forkable and eventually tie into our Strive
+          service via Yeoman & Gulp, which would allow us to provide import/export and data cleanup features to the OS development community.
+        roles:
+          - Growth Hacking
+
+
   - name: 'Stateful'
     company: 'Entrefuse'
     type: 'Open Source'
+    url: 'https://github.com/codewars/stateful'
     summary: An easy to use but powerful state machine for Ruby. It was custom built instead of using other
       existing gems because none of the other solutions supported features that were needed.
     roles:
@@ -302,6 +349,7 @@ projects:
   - name: 'Mongoidal'
     type: 'Open Source'
     company: 'Entrefuse'
+    url: 'https://github.com/codewars/mongoidal'
     summary: 'Mongoid on steroids - this gem contains a large number of add-on improvements to the Mongoid library.'
     roles:
       - 'Backend Web Development'
@@ -313,7 +361,8 @@ projects:
   - name: 'Batcan'
     type: 'Open Source'
     company: 'Entrefuse'
-    summary: 'Simple and expressive permissions system for Ruby on Rails projects'
+    url: 'https://github.com/codewars/batcan'
+    summary: 'Simple and expressive permissions system for Ruby on Rails projects.'
     roles:
       - 'Backend Web Development'
     skills:
@@ -321,7 +370,7 @@ projects:
       - Ruby on Rails
 
     highlights:
-      - text: Created a much more natural and logic alternative to using the CanCan gem
+      - text: Created a much more natural and logic alternative to using the CanCan gem.
         roles:
           - Backend Web Development
 
@@ -330,9 +379,12 @@ projects:
     company: DirecTV
     url: "http://www.directv.com"
     type: "Website"
-    summary: "I lead the JavaScript development team for the .com team"
+    summary: "I lead the JavaScript development team for the .com team. My role was that of an \"integrator\"
+      which meant I was also responsible for cordinating and integrating frontend and backend codebases."
     roles:
       - "Frontend Web Development"
+      - Technical Leadership
+      - Agile Project Management
     skills:
       - "JavaScript"
       - "HTML/CSS"
@@ -346,8 +398,14 @@ projects:
 #              - "JavaScript"
 
     highlights:
+      - text: Lead all JavaScript development effort for the website. Trained, mentored and code reviewed all other JavaScript developers on the team.
+        skills:
+          - 'JavaScript'
+        roles:
+          - Frontend Web Development
+          - Technical Leadership
       -
-        text: "Rebuilt the legacy codebase to use a more modern framework approach while still leveraging the underlying Prototype.JS library."
+        text: "Rebuilt the legacy codebase to use a modern framework approach while still leveraging the underlying Prototype.JS library."
         skills:
           - "JavaScript"
           - "Prototype.JS"
@@ -360,6 +418,13 @@ projects:
           - "JSP"
         roles:
           - "Backend Web Development"
+      - text: Was responsible for picking, managing and maintaining our project management solution (Target Process).
+        roles:
+          - Agile Project Management
+      - text: Worked with multiple teams to help develop a project management process that was both agile and still worked within
+          the company's otherwise waterfall management style.
+        roles:
+          - Agile Project Management
 
   - name: "DPEG"
     company: DirecTV
@@ -377,7 +442,7 @@ projects:
       - "Sass"
       - "Slim"
     highlights:
-      - text: "Brainstormed with the team and played a role in making product decisions for future DirecTV web products"
+      - text: "Brainstormed with the team and played a role in making product decisions for future DirecTV web products."
         roles:
           - "Product Management"
       - text: "Prototyped future app ideas utilizing Ruby on Rails and jQuery"
@@ -429,7 +494,7 @@ projects:
   - name: 'JSON API'
     company: Boom Music
     type: API
-    summary: "I was a core contributor to the company's application API, which was used both by our website and by our SDKs"
+    summary: "I was a core contributor to the company's application API, which was used both by our website and game SDKs."
     roles:
       - "Backend Web Development"
     skills:
@@ -437,7 +502,7 @@ projects:
       - "ASP.NET"
       - WCF
     highlights:
-      - text: "Refactored and Simplified C# business objects to allow for increased productivity"
+      - text: "Refactored and Simplified C# business objects to allow for increased productivity."
         roles:
           - "Backend Web Development"
         skills:
@@ -461,24 +526,24 @@ projects:
       - "Ext JS"
       - "HTML/CSS"
     highlights:
-      - text: "Rapidly built CMS front-end utilizing Ext JS"
+      - text: "Rapidly built CMS front-end utilizing Ext JS."
         roles:
           - Backend Web Development
         skills:
           - "Ext JS"
           - "JavaScript"
           - "HTML/CSS"
-      - text: "Designed a highly praised user experience for working with internal data"
+      - text: "Designed a highly praised user experience for working with internal data."
         roles:
           - UX Design
-      - text: "Developed an queue/digestion system for processing batches of over 100K+ MP3 files"
+      - text: "Developed an queue/digestion system for processing batches of over 100K+ MP3 files."
         roles:
           - Backend Web Development
         skills:
           - C#
           - MS SQL Server
           - WCF
-      - text: "Digestion system was able to scrub and reconcile data across multiple data sources"
+      - text: "Digestion system was able to scrub and reconcile data across multiple data sources."
         roles:
           - Backend Web Development
         skills:
@@ -508,7 +573,7 @@ projects:
       - MS CRM
       - MS Virtual Earth
     highlights:
-      - text: Created an internal SDK that allowed our team to rapidly build-out advanced applications on top of the MS CRM platform
+      - text: Created an internal SDK that allowed our team to rapidly build-out advanced applications on top of the MS CRM platform.
         roles:
           - Frontend Web Development
           - Backend Web Development
@@ -536,6 +601,7 @@ projects:
           - Rapid Prototyping
           - UX Design
           - Data Design
+
 
   - name: "Air Force Board of Corrections"
     company: 'Invoke Systems/Smith'
@@ -570,17 +636,18 @@ projects:
       - XML
       - ASP
       - SVN
+      - VBScript
 
     highlights:
       - text: "On many projects I lead a small development team. I was responsible for reviewing code and delegating tasks."
         roles:
           - Technical Leadership
 
-      - text: "Developed custom CMS and CRM applications for various clients using .NET technologies"
+      - text: "Developed custom CMS and CRM applications for various clients using .NET technologies."
         roles:
           - Backend Web Developer
           - Frontend Web Developer
-      - text: "Was the primary person at the company responsible for UX and UI design"
+      - text: "Was the primary person at the company responsible for UX and UI design."
         roles:
           - Web Design
           - UX Design

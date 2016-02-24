@@ -1,8 +1,9 @@
 .project(id='{{project.name}}', ng-if='!$root.hideAllOnFilter || shouldShowItem(project)')
   h4
-    a(href="{{project.url}}") {{project.name}}
+    a.name(href="{{project.url}}", ng-if="project.url", external) {{project.name}}
+    span.name(ng-if="!project.url") {{project.name}}
     time(ng-if='project.startDate') {{project.startDate}} - {{project.endDate}}
-    span {{project.type}}
+    span.type {{project.type}}
   .project-details
     div(ng-if='shouldShowItem(project)')
       p(ng-if='project.summary') {{project.summary}}
