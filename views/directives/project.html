@@ -1,0 +1,37 @@
+
+<div id="{{project.name}}" ng-if="!$root.hideAllOnFilter || shouldShowItem(project)" class="project">
+  <h4><a href="{{project.url}}" ng-if="project.url" external="external" class="name">{{project.name}}</a><span ng-if="!project.url" class="name">{{project.name}}</span>
+    <time ng-if="project.startDate">{{project.startDate}} - {{project.endDate}}</time><span class="type">{{project.type}}</span>
+  </h4>
+  <div class="project-details">
+    <div ng-if="shouldShowItem(project)">
+      <p ng-if="project.summary">{{project.summary}}</p>
+      <tags-used label="Roles" items="project.roles" type="role" ng-if="view === 'detailed'"></tags-used>
+      <tags-used label="Technologies" items="project.skills" type="skill" ng-if="view === 'detailed'"></tags-used>
+      <div ng-if="project.highlights &amp;&amp; view === 'detailed' &amp;&amp; (!$root.hideAllOnFilter || shouldShowGroup('highlights'))">
+        <h6>Highlights</h6>
+        <ul ng-if="shouldShowGroup(&quot;highlights&quot;)">
+          <highlight ng-repeat="item in project.highlights" item="item" ng-if="shouldShowItem(item)"></highlight>
+        </ul>
+        <div ng-if="!shouldShowGroup(&quot;highlights&quot;)" class="notice">There are no {{$root.filterName()}} related highlights to show.
+          <clear-filters></clear-filters>
+        </div>
+      </div>
+      <div ng-if="project.samples &amp;&amp; view === 'detailed'" class="samples">
+        <h6>Code Samples</h6>
+        <ul ng-if="shouldShowGroup('samples')" class="inline-items">
+          <li ng-repeat="sample in project.samples"><a ng-click="setSample(sample)" ng-class="{active: sample === activeSample}">{{sample.name}}</a></li>
+        </ul>
+        <div ng-if="activeSample" class="code-sample">
+          <div hljs="hljs" language="{{activeSample.language}}" source="activeSample.code" class="language-{{activeSample.language}}"></div>
+        </div>
+        <div ng-if="!shouldShowGroup(project, &quot;samples&quot;)" class="notice">There are no {{$root.filterName()}} related samples to show.
+          <!--clear-filters-->
+        </div>
+      </div>
+    </div>
+    <div ng-if="!shouldShowItem(project)" class="notice">This project is not relevant to {{$root.filterName()}}.
+      <!--clear-filters-->
+    </div>
+  </div>
+</div>

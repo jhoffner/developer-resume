@@ -1,0 +1,14 @@
+
+<div ng-if="!$root.hideAllOnFilter || shouldShowCompany()" class="company">
+  <h5>{{company.company}}
+    <time ng-if="company.startDate">{{company.startDate}} - {{company.endDate || 'Present'}}</time>
+    <div ng-if="company.title" class="title">{{company.title}}</div>
+  </h5>
+  <div ng-if="shouldShowCompany()">
+    <p ng-if="company.summary">{{company.summary}}</p>
+    <project ng-repeat="project in company.projects" project="project" view="view"></project>
+  </div>
+  <div ng-if="!shouldShowCompany()" class="notice">This item is not relevant to {{$root.filterName()}}.
+    <!--clear-filters-->
+  </div>
+</div>

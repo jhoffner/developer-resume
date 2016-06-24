@@ -1,0 +1,152 @@
+
+<div class="resume">
+  <div class="sidebar top"></div>
+  <div class="sidebar bottom">
+    <div scroll="scroll" class="area">
+      <h2>{{resume.basics.name}}</h2>
+      <div class="content">
+        <div ng-if="resume.basics.label" class="resume-label">{{resume.basics.label}}</div>
+        <div ng-if="resume.basics.location" class="resume-location">{{resume.basics.location.city}}, {{resume.basics.location.region}}</div>
+      </div>
+    </div>
+    <div class="area links">
+      <h3>Contents</h3>
+      <div class="content">
+        <ul>
+          <li ng-if="resume.basics.highlights"><a ng-click="goto('highlights')">Highlights</a></li>
+          <li ng-if="resume.roles"><a ng-click="goto('roles')">Roles</a></li>
+          <li ng-if="resume.skills"><a ng-click="goto('skills')">Skills</a></li>
+          <li ng-if="resume.markets"><a ng-click="goto('markets')">Markets</a></li>
+          <li ng-if="resume.work || resume.projects"><a ng-click="goto('experience')">Experience</a></li>
+          <li ng-if="resume.interests"><a ng-click="goto('interests')">Interests</a></li>
+          <li ng-if="resume.goals"><a ng-click="goto('goals')">Goals</a></li>
+          <li ng-if="resume.articles"><a ng-click="goto('articles')">Articles</a></li>
+          <li ng-if="resume.basics.profiles"><a ng-click="goto('social')">Social</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="area links">
+      <h3>View</h3>
+      <div class="content">
+        <ul>
+          <li ng-class="{active: view === 'detailed'}"><a ng-click="view = 'detailed'">Detailed</a></li>
+          <li ng-class="{active: view === 'simple'}"><a ng-click="view = 'simple'">Simple</a></li>
+        </ul>
+      </div>
+    </div>
+    <div ng-class="{alt: hasActiveFilter()}" class="area">
+      <h3>Filter</h3>
+      <div ng-hide="hasActiveFilter()">Click a role or skill to filter content.</div>
+      <div ng-show="hasActiveFilter()">
+        <div ng-if="filter.role"><span><b>Role:</b><a ng-click="filter(&quot;role&quot;, filter.role)">remove</a></span>
+          <div>{{tagLabel(filter.role)}}</div>
+        </div>
+        <div ng-if="filter.skill"><span><b>Skill:</b><a ng-click="filter(&quot;skill&quot;, filter.skill)">remove</a></span>
+          <div>{{tagLabel(filter.skill)}}</div>
+        </div>
+        <div ng-if="filteredProjects" class="content">
+          <h4>Related Experience:</h4>
+          <ul>
+            <li ng-repeat="project in filteredProjects"><a ng-click="goto(project.name)">{{project.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--.area.alt-->
+    <!--  h3 View-->
+    <!--  ul.inline-items.content-->
+    <!--    li Resume-->
+    <!--    li: a Coversheet-->
+    <!--.area-->
+    <!--  h3 Personal Notes-->
+    <!--  p You can leave notes here and they will persist between sessions.-->
+  </div>
+  <div class="page-header">
+    <h1>About Me</h1>
+  </div>
+  <div class="page-title">
+    <h1>{{resume.basics.name}}</h1>
+    <h2 ng-if="resume.basics.label">{{resume.bascis.label}}</h2>
+  </div>
+  <article>
+    <resume-section id="highlights" label="Highlights">
+      <ul>
+        <li ng-repeat="item in resume.basics.highlights">{{item}}</li>
+      </ul>
+    </resume-section>
+    <resume-section id="roles" label="Roles">
+      <div class="area">
+        <div class="two-columns">
+          <tags-list category="primary" label="Primary" type="role"></tags-list>
+        </div>
+        <div class="two-columns">
+          <tags-list category="secondary" label="Secondary" type="role"></tags-list>
+        </div>
+      </div>
+    </resume-section>
+    <resume-section id="skills" label="Skills">
+      <div class="area">
+        <tags-list category="primary" label="Primary" ul-class="two-columns" type="skill"></tags-list>
+      </div>
+      <div class="area">
+        <tags-list category="secondary" label="Secondary" ul-class="inline-items" type="skill"></tags-list>
+      </div>
+      <div class="area">
+        <tags-list category="legacy" label="Throwback" ul-class="inline-items" type="skill"></tags-list>
+      </div>
+    </resume-section>
+    <resume-section id="experience" label="Experience">
+      <h4 class="header">@Work</h4>
+      <company ng-repeat="company in resume.work" company="company" view="view"></company>
+      <div ng-if="resume.sideProjects.length">
+        <h4 class="header">@Home</h4>
+        <div class="company">
+          <project ng-repeat="project in resume.sideProjects" project="project" view="view"></project>
+        </div>
+      </div>
+    </resume-section>
+    <resume-section id="interests" label="Interests" ng-if="resume.interests">
+      <div ng-repeat="area in resume.interests" class="area">
+        <h4>{{area.category}}</h4>
+        <ul class="inline-items">
+          <li ng-repeat="item in area.items">{{item}}</li>
+        </ul>
+      </div>
+    </resume-section>
+    <resume-section id="goals" label="Goals" ng-if="resume.goals">
+      <div ng-repeat="area in resume.goals" class="area">
+        <h4>{{area.category}}</h4>
+        <ul>
+          <li ng-repeat="item in area.items">{{item}}</li>
+        </ul>
+      </div>
+    </resume-section>
+    <resume-section id="articles" label="Articles" ng-if="resume.articles">
+      <div ng-repeat="area in resume.articles" class="area">
+        <h4 ng-if="area.category">{{area.category}}</h4>
+        <ul>
+          <li ng-repeat="item in area.items"><a href="{{item.href}}" external="external">{{item.name}}</a></li>
+        </ul>
+      </div>
+    </resume-section>
+    <!--resume-section(label='Critique')-->
+    <!--  .area-->
+    <!--    h4 My Top 3 Strongest Traits-->
+    <!--    ul.inline-items-->
+    <!--        li Creative Problem Solver-->
+    <!--        li Hard Worker-->
+    <!--        li Fast Learner-->
+    <!---->
+    <!--  .area-->
+    <!--    h4 My Top 3 Weakest Traits-->
+    <!--    ul.inline-items-->
+    <!--        li Easy to Manage-->
+    <!--        li Strong life/work balance-->
+    <!--        li Highly Focused-->
+    <resume-section id="social" label="Social" ng-if="resume.basics.profiles.length">
+      <ul class="inline-items">
+        <li ng-repeat="profile in resume.basics.profiles"><a ng-href="profile.url" external="external">{{profile.network}}</a></li>
+      </ul>
+    </resume-section>
+  </article>
+</div>

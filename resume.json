@@ -1,0 +1,1397 @@
+{
+	"basics": {
+		"name": "Jake Hoffner",
+		"label": "Technical Leader / Web Architect",
+		"website": "jhoffner.github.io",
+		"location": {
+			"city": "Los Angeles",
+			"region": "California"
+		},
+		"highlights": [
+			"16 years of professional software development experience.",
+			"Co-founded a VC funded startup in 2012.",
+			"Self-taught at the age of 19.",
+			"First professional job was at the age of 20.",
+			"Started as a designer & front-end developer.",
+			"Has worked on Federal, State, Military, B2B and Consumer applications.",
+			"2x Startup Weekend Winner."
+		],
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"username": "jakehoffner",
+				"url": "http://www.linkedin.com/in/jakehoffner"
+			},
+			{
+				"network": "Twitter",
+				"username": "jakehoffner",
+				"url": "https://twitter.com/JakeHoffner"
+			},
+			{
+				"network": "Stack Overflow",
+				"username": "jake-hoffner",
+				"url": "http://stackoverflow.com/users/572261/jake-hoffner"
+			},
+			{
+				"network": "GitHub",
+				"username": "jhoffner",
+				"url": "http://github.com/jhoffner"
+			},
+			{
+				"network": "Quora",
+				"username": "Jake-Hoffner",
+				"url": "https://www.quora.com/profile/Jake-Hoffner"
+			},
+			{
+				"network": "Codewars",
+				"username": "jhoffner",
+				"url": "http://www.codewars.com/users/jhoffner"
+			},
+			{
+				"network": "Codepen",
+				"username": "jhoffner",
+				"url": "http://codepen.io/jhoffner"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "Entrefuse",
+			"startDate": "Oct 2012",
+			"endDate": "Present",
+			"title": "CTO",
+			"summary": "As co-founder and CTO, I am responsible primarily for managing the technical side of the company. In the early days I was the sole developer, eventually bringing in and managing contract developers and finally a full-time development team. I manage that team while continuing to contribute as a principle developer. As co-founder I also split product development, UX design and project management responsibilities with my co-founder."
+		},
+		{
+			"company": "DirecTV",
+			"startDate": "Jan 2009",
+			"endDate": "Oct 2012",
+			"title": "Lead Web Developer",
+			"summary": "I was originally brought in for a year contract to work on the DirecTV website. The contract ended up being extended another 3 years, with me eventually taking a full-time position with their product development team to manage their prototype development."
+		},
+		{
+			"company": "Razorfish",
+			"summary": "Razorfish is a consulting firm that does both design and development work for popular brands such as the NFL and Audi. At the time the development staff in their LA office was almost fully commited to another project. I was brought in to help lead their development efforts on a smaller project.",
+			"startDate": "Oct 2008",
+			"endDate": "Jan 2009",
+			"title": "Presentation Layer Developer (Contract)"
+		},
+		{
+			"company": "Boom Music",
+			"startDate": "Mar 2008",
+			"endDate": "Oct 2008",
+			"title": "Software Developer",
+			"summary": "Boom was an early startup, basically Pandora for XBox/Playstation. It provided SDK's for game developers to integrate into their software. Curated playlists were used to match player's musical preferences with the context of the game - in order to enhance the gaming experience. The company eventually failed due to the inability to obtain series B funding."
+		},
+		{
+			"company": "Invoke Systems/Smith",
+			"title": "Software Developer",
+			"startDate": "Oct 2000",
+			"endDate": "Jan 2008",
+			"summary": "My first full-time development position. I originally interviewed for a web designer position but recent development work I had done with a Flash website motivated them to hire me as a developer instead. As they were a dev shop, I worked on numurious projects, many of which were for government and military. Eventually the company was acquired by Smith (formally Ascentium)."
+		}
+	],
+	"education": [
+		{
+			"institution": "Sheffield Audio Institute",
+			"area": "Audio Engineering",
+			"studyType": "Certificate",
+			"from": 1998,
+			"to": 1999
+		}
+	],
+	"markets": [
+		{
+			"name": "Consumer Web",
+			"years": 8
+		},
+		{
+			"name": "B2B",
+			"years": 8
+		},
+		{
+			"name": "Customer Relationship Management",
+			"years": 6
+		},
+		{
+			"name": "Open Source",
+			"years": 4
+		},
+		{
+			"name": "Crowdsourced Content",
+			"years": 4
+		},
+		{
+			"name": "Social Communities",
+			"years": 4
+		},
+		{
+			"name": "Television",
+			"years": 4
+		},
+		{
+			"name": "Document Management Systems",
+			"years": 4
+		},
+		{
+			"name": "Content Management Systems",
+			"years": 2
+		},
+		{
+			"name": "Recruiting",
+			"years": 1
+		},
+		{
+			"name": "Marketplaces",
+			"years": 1
+		}
+	],
+	"achievements": [
+		{
+			"category": "Awards",
+			"items": [
+				{
+					"text": "2x Startup Weekend Winner"
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "I co-founded Codewars.com, writing ~95% of the codebase myself.",
+					"roles": [
+						"Product Management",
+						"Project Management",
+						"UX Design",
+						"Backend Web Development",
+						"Fontend Web Development"
+					],
+					"skills": [
+						"Ruby",
+						"Ruby on Rails",
+						"JavaScript",
+						"CoffeeScript"
+					]
+				}
+			]
+		}
+	],
+	"goals": [
+		{
+			"category": "Career",
+			"items": [
+				"Build innovative products that make an impact",
+				"Ability to be a core contributor to product decisions",
+				"Be exposed to new challenges that push my limits",
+				"Continue to mature as a skilled technical leader"
+			]
+		},
+		{
+			"category": "Work Environment",
+			"items": [
+				"Non-corporate/innovative culture",
+				"Passionate team",
+				"Modern stack",
+				"Talented and driven colleagues",
+				"Autonomy"
+			]
+		}
+	],
+	"interests": [
+		{
+			"category": "Roles & Technologies I prefer to work with",
+			"id": "interests-preferred",
+			"items": [
+				"Technical Leadership",
+				"Product Development",
+				"Fullstack Web Development",
+				"Ruby",
+				"Ruby on Rails",
+				"Node.js",
+				"Docker",
+				"UX Design",
+				"Growth Hacking"
+			]
+		},
+		{
+			"category": "Roles & Technologies I want to avoid at all costs",
+			"id": "interests-avoid",
+			"items": [
+				"Devops",
+				"Php",
+				"Java"
+			]
+		},
+		{
+			"category": "Roles & Technologies I want to learn or improve at",
+			"id": "interests-improve",
+			"items": [
+				"Growth Hacking",
+				"Mobile Development",
+				"Flux/React",
+				"Meteor",
+				"GraphDBs",
+				"Elixir",
+				"Go"
+			]
+		},
+		{
+			"category": "Challenges that interest me the most",
+			"id": "interests-challenges",
+			"items": [
+				"Framework & Library Development",
+				"Knowledge Graphs",
+				"Recommendation/Matching Systems",
+				"Communication/Messaging Systems",
+				"Micro-service Oriented Architecture",
+				"Automation"
+			]
+		},
+		{
+			"category": "My Personal Interests & Hobbies",
+			"id": "interests-personal",
+			"items": [
+				"Food",
+				"Health",
+				"Music",
+				"Bass Guitar",
+				"Snowboarding",
+				"Traveling",
+				"Vagabonding",
+				"Video Games",
+				"Programming",
+				"Movies"
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "Codewars.com",
+			"type": "Website",
+			"company": "Entrefuse",
+			"url": "http://www.codewars.com",
+			"summary": "Codewars.com enables developers to dramatically improve their coding skills through the use of small coding challenges called \"kata\". It has a user base of over 150k developers, who must first pass a series of simple programming tests before they can sign up.",
+			"skills": [
+				"Ruby on Rails",
+				"Ruby",
+				"JavaScript",
+				"CoffeeScript",
+				"HTML/CSS",
+				"Git",
+				"MongoDB",
+				"Web Sockets",
+				"jQuery",
+				"Sass",
+				"Memcached",
+				"Heroku"
+			],
+			"roles": [
+				"Backend Web Development",
+				"Frontend Web Development",
+				"Web Architecture",
+				"Technical Leadership",
+				"Agile Project Management",
+				"Product Management",
+				"UX Design",
+				"Growth Hacking"
+			],
+			"highlights": [
+				{
+					"text": "I personally programmed ~90% of the site's codebase."
+				},
+				{
+					"skills": [
+						"Ruby on Rails",
+						"Ruby",
+						"JavaScript"
+					],
+					"text": "Extended `Rails` to handle the concept known as PJAX on a more integrated and deeper level.",
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Implemented a concept dubbed DJAX (Deferred AJAX) to allow `Rails` to handle slow-client requests by leveraging Web Sockets and Redis.",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby",
+						"Redis",
+						"Web Sockets"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Built a custom client-side templating engine complete with limited two-way bindings utilizing jQuery as the core framework.",
+					"skills": [
+						"CoffeeScript",
+						"jQuery"
+					],
+					"roles": [
+						"Frontend Web Development"
+					]
+				},
+				{
+					"text": "Built a custom client-side application framework built on top of jQuery that uses a hybrid design leveraging PJAX.",
+					"skills": [
+						"CoffeeScript",
+						"jQuery"
+					],
+					"roles": [
+						"Frontend Web Development"
+					]
+				},
+				{
+					"text": "Architected the entire `Rails` API and MongoDB data model for the site.",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby",
+						"MongoDB"
+					],
+					"roles": [
+						"Web Architecture",
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Utilized advanced caching techniques by leveraging Redis and Memcached services together.",
+					"skills": [
+						"Redis",
+						"Memcached"
+					],
+					"roles": [
+						"Web Architecture",
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Managed a team of contracted developers that were brought in to enhance portions of the site.",
+					"roles": [
+						"Technical Leadership"
+					]
+				}
+			]
+		},
+		{
+			"name": "Strive.co",
+			"company": "Entrefuse",
+			"url": "http://strive.co",
+			"type": "Website",
+			"summary": "Strive.co is recruitement based product focused on placing skilled web developers into their dream positions.",
+			"skills": [
+				"Ruby on Rails",
+				"Ruby",
+				"Node.js",
+				"JavaScript",
+				"AngularJS",
+				"HTML/CSS",
+				"Less",
+				"Gulp",
+				"Docker",
+				"AWS",
+				"Git",
+				"MongoDB",
+				"Redis",
+				"Memcached",
+				"Web Sockets",
+				"Nginx",
+				"Bash",
+				"Linux",
+				"Neo4j"
+			],
+			"roles": [
+				"Backend Web Development",
+				"Frontend Web Development",
+				"Web Architecture",
+				"Technical Leadership",
+				"Agile Project Management",
+				"Product Management",
+				"UX Design",
+				"Devops",
+				"Growth Hacking"
+			],
+			"highlights": [
+				{
+					"text": "Improved jbuilder performance by bypassing the need to use the `Rails` templating system.",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Built a sophisticated and flexible `Rails` API scheme that allowed for multiple front-end clients to interface with it.",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Implemented a micro-service oriented architecture leveraging Docker and Nginx to link Node.js and `Rails` services together.",
+					"skills": [
+						"Ruby on Rails",
+						"Docker",
+						"Nginx",
+						"Node.js"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Quickly learned AngularJS so that I could contribute to the codebase along with the rest of the front-end team.",
+					"skills": [
+						"AngularJS",
+						"JavaScript"
+					],
+					"roles": [
+						"Frontend Web Development"
+					]
+				},
+				{
+					"text": "Architected the entire Rails API and MongoDB data model for the site.",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby",
+						"MongoDB"
+					],
+					"roles": [
+						"Backend Web Development",
+						"Web Architecture"
+					]
+				},
+				{
+					"text": "Utilized advanced caching techniques by leveraging Redis and Memcached services together.",
+					"skills": [
+						"Redis",
+						"Memcached"
+					],
+					"roles": [
+						"Backend Web Development",
+						"Web Architecture"
+					]
+				},
+				{
+					"text": "Wrote Bash scripts to deploy Docker based architecture to AWS.",
+					"skills": [
+						"Bash",
+						"AWS"
+					],
+					"roles": [
+						"Devops"
+					]
+				},
+				{
+					"text": "Managed AWS infrastructure, including ECS & EC2.",
+					"skills": [
+						"AWS",
+						"Docker"
+					],
+					"roles": [
+						"Devops"
+					]
+				},
+				{
+					"text": "Implemented a Neo4j database to map our database as a knowledge graph, which was used for analytics, reporting and predictive matching.",
+					"skills": [
+						"Neo4j"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Managed a small team of full-time web developers.",
+					"roles": [
+						"Technical Leadership"
+					]
+				},
+				{
+					"text": "Planned and ran weekly agile planning meetings.",
+					"roles": [
+						"Technical Leadership",
+						"Agile Project Management"
+					]
+				},
+				{
+					"text": "Shared product design and roadmap planning responsibilities with my co-founder.",
+					"roles": [
+						"Product Management"
+					]
+				},
+				{
+					"text": "Managed the growth hacking experiments for the team and implement various experiments of my own. This includes writing blog entries, Twitter integrations, A/B testing of email & in-app marketing campaigns, etc.",
+					"roles": [
+						"Growth Hacking"
+					]
+				}
+			]
+		},
+		{
+			"name": "CodeRunner",
+			"company": "Entrefuse",
+			"type": "Open Source",
+			"url": "https://github.com/Codewars/codewars-runner-cli",
+			"summary": "A code execution engine that supports safely executing code challenges within a sandbox. Used by both Strive and Codewars.",
+			"roles": [
+				"Backend Web Development",
+				"Web Architecture",
+				"Technical Leadership",
+				"Product Management",
+				"Agile Project Management"
+			],
+			"skills": [
+				"JavaScript",
+				"Node.js",
+				"Docker",
+				"AWS",
+				"Redis",
+				"Bash",
+				"Digital Ocean"
+			],
+			"highlights": [
+				{
+					"text": "Designed a system that was able to handle hundreds's of concurrent dynamic code executions requests with a scalable architecture.",
+					"roles": [
+						"Web Architecture"
+					],
+					"skills": [
+						"Docker",
+						"Node.js"
+					]
+				},
+				{
+					"text": "Able to execute code within Python, JavaScript, Ruby, Java, C#, Clojure, Haskell & CoffeeScript.",
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Unique feature of the engine is that it returns test case output, allowing test cases to be ran alonside of the user provided code.",
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Individual Docker containers were used to safely execute each API request within their own sandbox.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Docker"
+					]
+				},
+				{
+					"text": "Redis was used to enable a cluster of workers to pull from a queue.",
+					"roles": [
+						"Web Architecture"
+					],
+					"skills": [
+						"Redis"
+					]
+				}
+			]
+		},
+		{
+			"name": "Developer Resume",
+			"company": "Entrefuse",
+			"type": "Open Source / Prototype",
+			"url": "https://github.com/jhoffner/developer-resume",
+			"summary": "The site that you are viewing now (if being viewed by web) was originally developed during an internal hackathon that I arranged for me and my development team. Each of us were giving 2 days to come up with our own project that was meant to innovate within the realm of our product.",
+			"roles": [
+				"Frontend Web Development",
+				"Rapid Prototyping",
+				"UX Design",
+				"Web Design",
+				"Growth Hacking"
+			],
+			"skills": [
+				"AngularJS",
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"Sass",
+				"YAML",
+				"JSON",
+				"Gulp"
+			],
+			"highlights": [
+				{
+					"text": "Quickly developed within 2 days, I was able to illustrate to the team how we could implement an interactive resume that would allow employeers to drill down into the details that they care about most.",
+					"roles": [
+						"Rapid Prototyping",
+						"UX Design"
+					]
+				},
+				{
+					"text": "The site is an AngularJS app with no backend. It parses a YAML file into a JSON file during deployment via Gulp.",
+					"roles": [
+						"Frontend Web Development"
+					],
+					"skills": [
+						"AngularJS",
+						"YAML",
+						"JSON",
+						"Gulp"
+					]
+				},
+				{
+					"text": "The site was developed under the concept that it would be easily forkable and eventually tie into our Strive service via Yeoman & Gulp, which would allow us to provide import/export and data cleanup features to the OS development community.",
+					"roles": [
+						"Growth Hacking"
+					]
+				}
+			]
+		},
+		{
+			"name": "MagLev",
+			"company": "Entrefuse",
+			"type": "Open Source",
+			"url": "https://github.com/jhoffner/mag-lev",
+			"summary": "A set of Rails extensions to super charge the development process. It was a set of best practices that came out of building 2 different websites (Codewars & Strive) with Rails.",
+			"roles": [
+				"Backend Web Development"
+			],
+			"skills": [
+				"Ruby",
+				"Ruby on Rails",
+				"Redis"
+			],
+			"highlights": [
+				{
+					"text": "Built a number of ActiveJob extensions for handling sophisticated async workflows and backend data processing.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ruby",
+						"Ruby on Rails",
+						"Redis"
+					]
+				},
+				{
+					"text": "Implemented a listener pattern that makes it far easier to implement sophisticated systems while keeping a maintable codebase.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ruby",
+						"Ruby on Rails",
+						"Redis"
+					]
+				}
+			]
+		},
+		{
+			"name": "Stateful",
+			"company": "Entrefuse",
+			"type": "Open Source",
+			"url": "https://github.com/codewars/stateful",
+			"summary": "An easy to use but powerful state machine for Ruby. It was custom built instead of using other existing gems because none of the other solutions supported features that were needed.",
+			"roles": [
+				"Backend Web Development"
+			],
+			"skills": [
+				"Ruby",
+				"Mongoid",
+				"Git"
+			],
+			"highlights": [
+				{
+					"text": "Unique feature of the gem is the ability to create grouped states.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ruby",
+						"Mongoid",
+						"MongoDB"
+					]
+				},
+				{
+					"text": "Gem provides an easy DSL for managing state changes and the events related to them.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ruby",
+						"Mongoid"
+					]
+				},
+				{
+					"text": "Implementing this gem within the Codewars and Strive codebases significantly increased the ability to maintain a complex and constantly evolving codebase.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ruby"
+					]
+				}
+			]
+		},
+		{
+			"name": "Mongoidal",
+			"type": "Open Source",
+			"company": "Entrefuse",
+			"url": "https://github.com/codewars/mongoidal",
+			"summary": "Mongoid on steroids - this gem contains a large number of add-on improvements to the Mongoid library.",
+			"roles": [
+				"Backend Web Development"
+			],
+			"skills": [
+				"Ruby",
+				"Mongoid",
+				"MongoDB",
+				"Git"
+			]
+		},
+		{
+			"name": "Batcan",
+			"type": "Open Source",
+			"company": "Entrefuse",
+			"url": "https://github.com/codewars/batcan",
+			"summary": "Simple and expressive permissions system for Ruby on Rails projects.",
+			"roles": [
+				"Backend Web Development"
+			],
+			"skills": [
+				"Ruby",
+				"Ruby on Rails"
+			],
+			"highlights": [
+				{
+					"text": "Created a much more natural and logic alternative to using the CanCan gem.",
+					"roles": [
+						"Backend Web Development"
+					]
+				}
+			]
+		},
+		{
+			"name": "DirecTV.com",
+			"company": "DirecTV",
+			"url": "http://www.directv.com",
+			"type": "Website",
+			"summary": "I lead the JavaScript development team for the .com team. My role was that of an \"integrator\" which meant I was also responsible for cordinating and integrating frontend and backend codebases.",
+			"roles": [
+				"Frontend Web Development",
+				"Technical Leadership",
+				"Agile Project Management"
+			],
+			"skills": [
+				"JavaScript",
+				"HTML/CSS",
+				"Prototype.JS",
+				"Java",
+				"JSP"
+			],
+			"highlights": [
+				{
+					"text": "Lead all JavaScript development effort for the website. Trained, mentored and code reviewed all other JavaScript developers on the team.",
+					"skills": [
+						"JavaScript"
+					],
+					"roles": [
+						"Frontend Web Development",
+						"Technical Leadership"
+					]
+				},
+				{
+					"text": "Rebuilt the legacy codebase to use a modern framework approach while still leveraging the underlying Prototype.JS library.",
+					"skills": [
+						"JavaScript",
+						"Prototype.JS"
+					],
+					"roles": [
+						"Frontend Web Development"
+					]
+				},
+				{
+					"text": "Was responsible for light weight integration of the Backend Web Development ATG/Java components with the Frontend Web Development codebase.",
+					"skills": [
+						"Java",
+						"JSP"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				},
+				{
+					"text": "Was responsible for picking, managing and maintaining our project management solution (Target Process).",
+					"roles": [
+						"Agile Project Management"
+					]
+				},
+				{
+					"text": "Worked with multiple teams to help develop a project management process that was both agile and still worked within the company's otherwise waterfall management style.",
+					"roles": [
+						"Agile Project Management"
+					]
+				}
+			]
+		},
+		{
+			"name": "DPEG",
+			"company": "DirecTV",
+			"type": "Website",
+			"summary": "As a part of a team dedicated to exploring innovative forward thinking products, I created an internal tool for rapidly prototyping web apps.",
+			"roles": [
+				"Backend Web Development",
+				"Frontend Web Development",
+				"Product Management",
+				"Rapid Prototyping"
+			],
+			"skills": [
+				"Ruby on Rails",
+				"Ruby",
+				"JavaScript",
+				"Sass",
+				"Slim"
+			],
+			"highlights": [
+				{
+					"text": "Brainstormed with the team and played a role in making product decisions for future DirecTV web products.",
+					"roles": [
+						"Product Management"
+					]
+				},
+				{
+					"text": "Prototyped future app ideas utilizing Ruby on Rails and jQuery",
+					"skills": [
+						"Ruby on Rails",
+						"Ruby",
+						"jQuery",
+						"JavaScript"
+					],
+					"roles": [
+						"Backend Web Development",
+						"Frontend Web Development",
+						"Rapid Prototyping"
+					]
+				}
+			]
+		},
+		{
+			"name": "Parsons.com",
+			"company": "Razorfish",
+			"url": "http://www.parsons.com",
+			"type": "Website",
+			"summary": "The site was built on top of MS Sharepoint, since the organization already made so much use of the product internally.",
+			"roles": [
+				"Frontend Web Development"
+			],
+			"skills": [
+				"Sharepoint",
+				"jQuery",
+				"JavaScript",
+				"HTML/CSS",
+				"C#",
+				"Google Maps",
+				"ASP.NET"
+			],
+			"highlights": [
+				{
+					"text": "Used jQuery to create front-end components for a Sharepoint backed website.",
+					"roles": [
+						"Frontend Web Development"
+					],
+					"skills": [
+						"jQuery",
+						"Sharepoint"
+					]
+				},
+				{
+					"text": "Handled some backend C#/Sharepoint development when needed.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"C#",
+						"Sharepoint"
+					]
+				},
+				{
+					"text": "Integrated Google Maps deeply into the product, such as widgets and dynamic content",
+					"roles": [
+						"Frontend Web Development"
+					],
+					"skills": [
+						"Google Maps"
+					]
+				}
+			]
+		},
+		{
+			"name": "JSON API",
+			"company": "Boom Music",
+			"type": "API",
+			"summary": "I was a core contributor to the company's application API, which was used both by our website and game SDKs.",
+			"roles": [
+				"Backend Web Development"
+			],
+			"skills": [
+				"C#",
+				"ASP.NET",
+				"WCF"
+			],
+			"highlights": [
+				{
+					"text": "Refactored and Simplified C# business objects to allow for increased productivity.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"C#",
+						"WCF",
+						"ASP.NET"
+					]
+				}
+			]
+		},
+		{
+			"name": "Internal CMS",
+			"company": "Boom Music",
+			"summary": "I built the internal tool which was used to ingest huge amounts of song data into our system, as well as used by the content team to manage playlists.",
+			"type": "Website",
+			"roles": [
+				"Frontend Web Development",
+				"Backend Web Development",
+				"UX Design"
+			],
+			"skills": [
+				"C#",
+				"ASP.NET",
+				"WCF",
+				"JavaScript",
+				"Ext JS",
+				"HTML/CSS"
+			],
+			"highlights": [
+				{
+					"text": "Rapidly built CMS front-end utilizing Ext JS.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"Ext JS",
+						"JavaScript",
+						"HTML/CSS"
+					]
+				},
+				{
+					"text": "Designed a highly praised user experience for working with internal data.",
+					"roles": [
+						"UX Design"
+					]
+				},
+				{
+					"text": "Developed an queue/digestion system for processing batches of over 100K+ MP3 files.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"C#",
+						"MS SQL Server",
+						"WCF"
+					]
+				},
+				{
+					"text": "Digestion system was able to scrub and reconcile data across multiple data sources.",
+					"roles": [
+						"Backend Web Development"
+					],
+					"skills": [
+						"C#",
+						"MS SQL Server",
+						"WCF"
+					]
+				}
+			]
+		},
+		{
+			"name": "Microsoft CRM",
+			"company": "Invoke Systems/Smith",
+			"type": "Integration, Multiple Clients",
+			"summary": "The last 3 years of my time with the company we had shifted our focus onto being a preferred MS CRM vendor. During this time I worked with a variety of clients including Seattle 411 and USDA. We became very good at bending the capabilities of the application to do things well beyond being a CRM.",
+			"roles": [
+				"Frontend Web Development",
+				"Backend Web Development",
+				"UX Design",
+				"Rapid Prototyping",
+				"Technical Leadership"
+			],
+			"skills": [
+				"C#",
+				"JavaScript",
+				"HTML/CSS",
+				"AJAX",
+				"MS SQL Server",
+				"MS CRM",
+				"MS Virtual Earth"
+			],
+			"highlights": [
+				{
+					"text": "Created an internal SDK that allowed our team to rapidly build-out advanced applications on top of the MS CRM platform.",
+					"roles": [
+						"Frontend Web Development",
+						"Backend Web Development",
+						"UX Design",
+						"Rapid Prototyping",
+						"Data Design"
+					],
+					"skills": [
+						"MS CRM",
+						"C#",
+						"JavaScript",
+						"MS Virtual Earth"
+					]
+				},
+				{
+					"text": "Worked with propsect clients to rapidly design and prototype custom CRM implementations that would work with their specific data model and needs.",
+					"roles": [
+						"Frontend Web Development",
+						"Backend Web Develpoment",
+						"UX Design",
+						"Rapid Prototyping",
+						"Data Design"
+					]
+				},
+				{
+					"text": "Extended MS CRM well beyond its original use-case. Some use-cases include a 411 help desk, a casino \"whale\" tracker, real-time customer support and government management.",
+					"roles": [
+						"Rapid Prototyping",
+						"UX Design",
+						"Data Design"
+					]
+				}
+			]
+		},
+		{
+			"name": "Air Force Board of Corrections",
+			"company": "Invoke Systems/Smith",
+			"type": "Windows Application",
+			"summary": "I spent a year working on a custom windows app for the Air Force, which was used for document management by all of their departments. My primary responsibility was to implement the GUI for the app.",
+			"roles": [
+				"Windows Development",
+				"UX Design"
+			],
+			"skills": [
+				"C#"
+			]
+		},
+		{
+			"name": "Custom Web Development",
+			"company": "Invoke Systems/Smith",
+			"type": "Website, Multiple Clients",
+			"summary": "My initial 4 years at the company was spent mostly building custom web applications for various clients such as the Maryland Department of Education and Maryland Department of Health and Hygiene.",
+			"roles": [
+				"Frontend Web Development",
+				"Backend Web Development",
+				"Web Design",
+				"UX Design",
+				"Technical Leadership"
+			],
+			"skills": [
+				"C#",
+				"ASP.NET",
+				"MS SQL Server",
+				"VB Script",
+				"JavaScript",
+				"HTML/CSS",
+				"Flash",
+				"XML",
+				"ASP",
+				"SVN",
+				"VBScript"
+			],
+			"highlights": [
+				{
+					"text": "On many projects I lead a small development team. I was responsible for reviewing code and delegating tasks.",
+					"roles": [
+						"Technical Leadership"
+					]
+				},
+				{
+					"text": "Developed custom CMS and CRM applications for various clients using .NET technologies.",
+					"roles": [
+						"Backend Web Developer",
+						"Frontend Web Developer"
+					]
+				},
+				{
+					"text": "Was the primary person at the company responsible for UX and UI design.",
+					"roles": [
+						"Web Design",
+						"UX Design"
+					]
+				}
+			]
+		},
+		{
+			"name": "Reqeo",
+			"type": "Website",
+			"startDate": "Jan 2012",
+			"endDate": "Oct 2012",
+			"summary": "A startup idea based on recommendations for users based off of mutual followers and interests. I spent over a year working on the concept in my off-time. In the end, I created the product in too much of a vacuum. It was a hard lesson learned in the importance of keeping a product simple and getting it in front of actual users as soon as possible. It was also probably my masterpiece in terms of clean and maintanable C# code - another reason why the project failed as the time should have been spent elsewhere.",
+			"roles": [
+				"Frontend Web Development",
+				"Backend Web Development",
+				"UX Design",
+				"Web Design"
+			],
+			"skills": [
+				"JavaScript",
+				"HTML/CSS",
+				"jQuery",
+				"C#",
+				"ASP.NET MVC",
+				"Lucene",
+				"MS SQL Server",
+				"MongoDB",
+				"Git",
+				"Message Bus"
+			],
+			"highlights": [
+				{
+					"text": "Built a custom client-side framework on top of jQuery to ease and DRY up development efforts. This framework was part of a similar design that I had been evolving over the passed 3 years.",
+					"skills": [
+						"JavaScript",
+						"jQuery"
+					],
+					"roles": [
+						"Frontend Web Development"
+					]
+				},
+				{
+					"text": "Utilizing a non-standard open source ORM, I created a repository based data model that leveraged both SQL Server and MongoDB with a CQRS influenced architectual pattern.",
+					"skills": [
+						"C#",
+						"MongoDB",
+						"MS SQL Server"
+					],
+					"roles": [
+						"Backend Web Development"
+					]
+				}
+			]
+		}
+	],
+	"roles": [
+		{
+			"name": "Frontend Web Development",
+			"years": 16,
+			"category": "primary"
+		},
+		{
+			"name": "Backend Web Development",
+			"years": 14,
+			"category": "primary"
+		},
+		{
+			"name": "Web Architecture",
+			"years": 7,
+			"category": "primary"
+		},
+		{
+			"name": "Technical Leadership",
+			"years": 7,
+			"category": "primary"
+		},
+		{
+			"name": "Agile Project Management",
+			"years": 5,
+			"category": "primary"
+		},
+		{
+			"name": "Product Management",
+			"years": 3,
+			"category": "primary"
+		},
+		{
+			"name": "Rapid Prototyping",
+			"category": "secondary"
+		},
+		{
+			"name": "Growth Hacking",
+			"category": "secondary"
+		},
+		{
+			"name": "Devops",
+			"category": "secondary"
+		},
+		{
+			"name": "UX Design",
+			"category": "secondary"
+		},
+		{
+			"name": "Web Design",
+			"category": "secondary"
+		}
+	],
+	"skills": [
+		{
+			"name": "JavaScript",
+			"years": 16,
+			"category": "primary"
+		},
+		{
+			"name": "Ruby",
+			"years": 4,
+			"category": "primary"
+		},
+		{
+			"name": "Ruby on Rails",
+			"years": 4,
+			"category": "primary"
+		},
+		{
+			"name": "AngularJS",
+			"years": 1,
+			"category": "primary"
+		},
+		{
+			"name": "HTML/CSS",
+			"years": 16,
+			"category": "primary"
+		},
+		{
+			"name": "Node.js",
+			"years": 4,
+			"category": "primary"
+		},
+		{
+			"name": "AWS",
+			"years": 1,
+			"category": "primary"
+		},
+		{
+			"name": "Docker",
+			"years": 1,
+			"category": "primary"
+		},
+		{
+			"name": "MongoDB",
+			"years": 5,
+			"category": "primary"
+		},
+		{
+			"name": "MS SQL Server",
+			"years": 10,
+			"category": "primary"
+		},
+		{
+			"name": "C#",
+			"years": 9,
+			"category": "primary"
+		},
+		{
+			"name": "SQL",
+			"years": 10,
+			"category": "primary"
+		},
+		{
+			"name": "ASP.NET MVC",
+			"years": 3,
+			"category": "primary"
+		},
+		{
+			"name": "ASP.NET",
+			"years": 8,
+			"category": "primary"
+		},
+		{
+			"name": "Redis",
+			"category": "secondary"
+		},
+		{
+			"name": "Memcached",
+			"category": "secondary"
+		},
+		{
+			"name": "Neo4j",
+			"category": "secondary"
+		},
+		{
+			"name": "CoffeeScript",
+			"category": "secondary"
+		},
+		{
+			"name": "Sass",
+			"category": "secondary"
+		},
+		{
+			"name": "Less",
+			"category": "secondary"
+		},
+		{
+			"name": "Sketch",
+			"category": "secondary"
+		},
+		{
+			"name": "Git",
+			"category": "secondary"
+		},
+		{
+			"name": "Gulp",
+			"category": "secondary"
+		},
+		{
+			"name": "Digital Ocean",
+			"category": "secondary"
+		},
+		{
+			"name": "Heroku",
+			"category": "secondary"
+		},
+		{
+			"name": "Elastic Search",
+			"category": "secondary"
+		},
+		{
+			"name": "jQuery",
+			"category": "secondary"
+		},
+		{
+			"name": "Nginx",
+			"category": "secondary"
+		},
+		{
+			"name": "Web Sockets",
+			"category": "secondary"
+		},
+		{
+			"name": "WCF",
+			"category": "secondary"
+		},
+		{
+			"name": "XML",
+			"category": "legacy"
+		},
+		{
+			"name": "XSLT",
+			"category": "legacy"
+		},
+		{
+			"name": "SVN",
+			"category": "legacy"
+		},
+		{
+			"name": "Flash",
+			"category": "legacy"
+		},
+		{
+			"name": "ASP",
+			"category": "legacy"
+		},
+		{
+			"name": "VBScript",
+			"category": "legacy"
+		}
+	]
+}

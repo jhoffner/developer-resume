@@ -1,0 +1,9 @@
+
+<div ng-if="items.length">
+  <h4 ng-if="label">{{label}}</h4>
+  <ul ng-class="ulClass">
+    <li ng-repeat="item in items">
+      <filter-tag label="{{item.name}}" years="{{item.years}}" type="{{type}}"></filter-tag>
+    </li>
+  </ul>
+</div>
